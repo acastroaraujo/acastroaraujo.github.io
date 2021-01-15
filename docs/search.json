@@ -1,0 +1,33 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-14T23:58:36-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-14T23:58:36-05:00"
+    },
+    {
+      "path": "welcome.html",
+      "title": "hello world",
+      "author": [
+        {
+          "name": "andrés",
+          "url": {}
+        }
+      ],
+      "date": "01-14-2021",
+      "contents": "\nI will be using this site as an exercise in writing / coding.\nTambién escribiré algunas cosas en español, pero serán pocas cosas porque estoy viviendo en EE.UU. y necesito practicar mi inglés.\nThe purpose of this post is to help me figure out how to set up the blog in the first place. 1\nMore interesting stuff will be coming next.\nI’ll also share some visualizations made with ggplot2.\n\nA pie chart is just a stacked bar chart in a polar coordinate system.\n\nshow code\nlibrary(ggplot2)\n\ndf <- data.frame(type = c(\"mouth\", \"body\"), size = c(4, 15))\n\ng <- ggplot(df, aes(x = \"\", y = size, fill = type)) + \n  geom_bar(stat = \"identity\", show.legend = FALSE)\n\ng\n\n\n\n\n\nshow code\ng + coord_polar(theta = \"y\")\n\n\n\n\n\nshow code\ng + coord_polar(theta = \"y\", start = 1) +\n    scale_fill_manual(values = c(\"#FFD104\", \"#fefffc\")) + \n    labs(title = \"pacman\") +\n    theme_void()\n\n\n\n\n\nI’m using the distill package to set this up.↩︎\n",
+      "last_modified": "2021-01-14T23:58:38-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
