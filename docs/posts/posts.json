@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/welcome/",
+    "path": "posts/2021-01-15-hello-world/",
     "title": "hello world",
     "description": {},
     "author": [
@@ -12,8 +12,8 @@
     "date": "2021-01-14",
     "categories": [],
     "contents": "\nI will be using this site as an exercise in writing / coding.\nTambién escribiré algunas cosas en español, pero serán pocas cosas porque estoy viviendo en EE.UU. y necesito practicar mi inglés.\nThe purpose of this post is to help me figure out how to set up the blog in the first place. 1\nMore interesting stuff will be coming next.\nI’ll also share some visualizations made with ggplot2.\n\nA pie chart is just a stacked bar chart in a polar coordinate system.\n\nshow code\nlibrary(ggplot2)\n\ndf <- data.frame(type = c(\"mouth\", \"body\"), size = c(4, 15))\n\ng <- ggplot(df, aes(x = \"\", y = size, fill = type)) + \n  geom_bar(stat = \"identity\", show.legend = FALSE)\n\ng\n\n\n\n\n\nshow code\ng + coord_polar(theta = \"y\")\n\n\n\n\n\nshow code\ng + coord_polar(theta = \"y\", start = 1) +\n    scale_fill_manual(values = c(\"#FFD104\", \"#fefffc\")) + \n    labs(title = \"pacman\") +\n    theme_void()\n\n\n\n\n\nI’m using the distill package to set this up.↩︎\n",
-    "preview": "posts/welcome/welcome_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2021-01-14T23:58:02-05:00",
-    "input_file": {}
+    "preview": "posts/2021-01-15-hello-world/hello-world_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2021-01-15T00:34:01-05:00",
+    "input_file": "hello-world.utf8.md"
   }
 ]

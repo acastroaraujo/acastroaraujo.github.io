@@ -1,7 +1,7 @@
 ---
-title: "About this blog"
+title: "about this blog"
 description: |
-  Some additional details about the blog
+  ...
 ---
 
 ```{r setup, include=FALSE}
