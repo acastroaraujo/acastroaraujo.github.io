@@ -78,7 +78,7 @@ d-appendix {
 /* Add any additional CSS rules below                      */
 
 .posts-list > h1 {
-    font-size: 1px;
+    font-size: 0px;  /* I find that having a title  in the index.Rmd is redundant*/
 }
 
 d-article p, d-article ul, d-article ol, d-article blockquote {
