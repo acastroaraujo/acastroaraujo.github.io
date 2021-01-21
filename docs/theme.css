@@ -78,14 +78,23 @@ d-appendix {
 /* Add any additional CSS rules below                      */
 
 .posts-list > h1 {
-    font-size: 0px;  /* I find that having a title in the index.Rmd is redundant*/
+    display: none;  /* I find that having a title in the index.Rmd is redundant*/
 }
+
+.sidebar-section.categories > ul > li:first-child {
+  display: none;
+}
+
+/* I don't think this is working: */
 
 d-article p, d-article ul, d-article ol, d-article blockquote {
     font-size: 0.9rem;
-    margin-bottom: 1.5em;
 }
 
 summary {
   font-size: 0.8rem;
+}
+
+.footnote-container {
+    padding: 30px;
 }

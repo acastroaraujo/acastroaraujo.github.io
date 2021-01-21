@@ -87,26 +87,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>andrés castro araújo: title</title>
+  <title>andrés castro araújo: acastroaraujo</title>
   
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="andrés castro araújo: title"/>
+  <meta property="og:title" content="andrés castro araújo: acastroaraujo"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="andrés castro araújo"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="andrés castro araújo: title"/>
+  <meta property="twitter:title" content="andrés castro araújo: acastroaraujo"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["title"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["acastroaraujo"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2188,16 +2188,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* Add any additional CSS rules below                      */
   
   .posts-list > h1 {
-      font-size: 0px;  /* I find that having a title in the index.Rmd is redundant*/
+      display: none;  /* I find that having a title in the index.Rmd is redundant*/
   }
+  
+  .sidebar-section.categories > ul > li:first-child {
+    display: none;
+  }
+  
+  /* I don't think this is working: */
   
   d-article p, d-article ul, d-article ol, d-article blockquote {
       font-size: 0.9rem;
-      margin-bottom: 1.5em;
   }
   
   summary {
     font-size: 0.8rem;
+  }
+  
+  .footnote-container {
+      padding: 30px;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2373,7 +2382,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"title","authors":[]}
+{"title":"acastroaraujo","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2536,7 +2545,7 @@ function init_posts_list() {
 
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
-<h1 class="posts-list-caption" data-caption="title">title</h1>
+<h1 class="posts-list-caption" data-caption="acastroaraujo">acastroaraujo</h1>
 <a href="posts/2021-01-19-un-paquete-para-analizar-sentencias-de-la-corte-constitucional/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["R","Colombia"]}</script>
 <div class="metadata">
@@ -2557,7 +2566,7 @@ function init_posts_list() {
 <p>un ejemplo de cómo usar el paquete ccc</p>
 </div>
 </a>
-<a href="posts/2021-01-17-cheers-to-network-science/" class="post-preview">
+<a href="posts/2021-01-17-cheers-to-network-analysis/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["networks","sociology"]}</script>
 <div class="metadata">
 <div class="publishedDate">Jan. 17, 2021</div>
@@ -2567,12 +2576,12 @@ function init_posts_list() {
 </div>
 <div class="thumbnail"></div>
 <div class="description">
-<h2>cheers to network theory</h2>
+<h2>cheers to network analysis</h2>
 <div class="dt-tags">
 <div class="dt-tag">networks</div>
 <div class="dt-tag">sociology</div>
 </div>
-<p>Here are some reasons why I think network theory holds a very special place in sociological theory.</p>
+<p>Here are some reasons why I think network analysis holds a very special place in sociological theory.</p>
 </div>
 </a>
 <a href="posts/2021-01-15-regression-to-the-mean/" class="post-preview">
@@ -2655,7 +2664,7 @@ function init_posts_list() {
 <!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>title</h1>
+<h1>acastroaraujo</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 

@@ -1,0 +1,205 @@
+---
+title: "regression to the mean"
+description: |
+  a visual explanation
+author: 
+  - name: andrés
+categories:
+  - statistics
+  - causality
+date: 01-15-2021
+output: distill::distill_article
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE
+  )
+
+## Packages
+library(tidyverse)
+
+## Plot settings
+theme_set(
+  theme_minimal(base_line_size = 0, base_family = "Amiri") +
+  theme(plot.background = element_rect(size = 0))
+  )
+
+```
+
+<font size="2.5"> 
+Most of this comes from [___Regression and Other Stories___](https://avehtari.github.io/ROS-Examples/), by A. Gelman, J. Hill, and A. Vehtari.
+</font> 
+
+## origin story
+
+Regression to the mean is one of the greatest parables in statistics. The term originated in 1886, when Francis Galton was studying hereditary patterns in human populations. While he was studying the association between children's and parent's heights, he noticed that tall (short) parents tend to have children shorter (taller) than themselves; and that they tended towards a *population average*.
+
+<aside>
+__par-a-ble__: A simple story used to illustrate a moral or spiritual lesson, as told by Jesus in the Gospels.
+</aside>
+
+```{r}
+HistData::Galton %>% 
+  ggplot(aes(x = parent, y = child)) + 
+  geom_jitter(alpha = 0.5) +
+  ## line of equality
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red", size = 1) +
+  ## regression line
+  geom_smooth(method = lm, se = FALSE, color = "skyblue")
+```
+
+
+This is the data originally analyzed by Galton himself^[He later analyzed data from pairs of brothers in the same way he analyzed parents and children. And here he also found evidence of "regression to the mean". This was surprising because there was _no directionality_, neither brother inherited his height from the other. He then discovered that, unless both measurements were perfectly correlated $(\rho = 1)$, both the prediction and equality lines *had* to be different from each other. </br></br>Stigler (2016) provides a brief historical overview of how of all this relates to problems in Darwin's original theory of evolution. </br></br>Yes, Francis Galton was racist.]. The dashed line represents *<span style = "color:red"> equality</span>*, meaning that parents and children have the same height. But Galton noted that children's heights were actually closer to the blue *<span style = "color:skyblue"> prediction line</span>*.
+
+The key insight is that, whenever randomness is involved, the more extreme outcomes will tend to be followed by more moderate outcomes. Why? Because part of the reason these outcomes are so extreme in the first place is due to randomness. Galton also termed this phenomena "regression to mediocrity"^[Historically, there have been two moral judgements regarding averages and normal distributions (Hacking 1990): </br></br> — The Quetelet-Durkheim conception of the normal as the _right_ and the _good_. </br></br> — Galton's notion of the normal as the _mediocre_, and _in need of improvement_.].
+
+Nowadays, we would look at this same problem using linear regression, which allows us to put the predicted heights of children into a simple formula.
+
+```{r}
+OLS <- HistData::Galton %>% 
+  mutate(parent = parent - mean(parent)) %>% ## scaling
+  lm(child ~ parent, data = .)
+
+coef(OLS)
+```
+
+Note that the heights of parents have been scaled in order to produce an intercept that corresponds to the population average (or "mediocrity"). 
+
+$$
+\widehat h_\text{child} =  0.65 \times \widetilde h_\text{parent} + \underbrace{68.09}_\text{mediocrity}
+$$
+
+If we don't scale the heights of the parents, the corresponding regression line is as follows: 
+
+$$\widehat h_\text{child} = 0.65 \times h_\text{parent} + 23.94$$
+
+<aside>
+Here, the intercept is the expected heights of children whose parents are zero inches tall.
+</aside>
+
+At first encounter, some people will interpret this as meaning that _regression to the mean_ implies that heights will become "more average" over time. Thus, a parent who is 5 inches above average is predicted to have children 3.2 inches taller than average, who in turn are predicted to have children 2.1 inches taller than average, and so on. This very common misunderstanding arises from neglecting the error term when thinking about future observations.
+
+$$
+h_\text{child} = \widehat h_\text{child} + \text{error}
+$$
+
+In Gelman et al's words:
+
+> ...the _prediction_ reduces variation, but at the same time the _error_ in the model adds variation just enough to keep the total variation in height roughly constant from one generation to the next.
+
+The following graphs show both ways of interpreting _regression to the mean_, based on how the data could look like across 20 generations:
+
+```{r, fig.height=5, fig.width=6, echo=TRUE, code_folding="show code"}
+OLS <- lm(child ~ parent, data = HistData::Galton)
+intercept <- coefficients(OLS)[1]
+slope <- coefficients(OLS)[2]
+sigma <- sd(residuals(OLS))
+
+g0 <- HistData::Galton$parent # first ancestors
+
+## Simulation
+
+reg_naive <- function(x, ...) {
+  x * slope + intercept
+}
+
+reg_correct <- function(x, ...) {
+  rnorm(length(x), x * slope + intercept, sigma)
+}
+
+n <- 12 # number of generations
+
+s_naive <- accumulate(1:n, reg_naive, .init = g0) 
+s_correct <- accumulate(1:n, reg_correct, .init = g0)
+names(s_correct) <- names(s_naive) <- 0:n
+
+df_naive <- bind_cols(s_naive) %>% 
+  mutate(ancestor = row_number()) %>% 
+  pivot_longer(cols = matches("\\d+"), names_to = "generation", values_to = "height") %>% 
+  mutate(simulation = "naive interpretation", generation = as.integer(generation))
+
+df_correct <- bind_cols(s_correct) %>% 
+  mutate(ancestor = row_number()) %>% 
+  pivot_longer(cols = matches("\\d+"), names_to = "generation", values_to = "height") %>% 
+  mutate(simulation = "correct interpretation", generation = as.integer(generation))
+
+bind_rows(df_correct, df_naive) %>% 
+  ggplot(aes(x = generation, y = height, color = ancestor, group = ancestor)) +
+  geom_line(show.legend = FALSE, alpha = 1/10) +
+  facet_wrap(~ simulation, ncol = 1, scales = "free_y") + 
+  scale_color_viridis_c() +
+  theme(strip.text.x = element_text(size = 14)) +
+  labs(y = "height (inches)")
+```
+<aside>
+This very simple simulation assumes that the population average remains constant over time, which is obviously false when you consider changes in public health, such as nutrition.
+
+As a general rule, _nothing in the social and biological sciences remains constant over time_.
+</aside>
+
+## the lesson
+
+___regression to the mean *will* lead to people to see causality where there is none.___
+
+As mentioned earlier, this phenomena shows up all the time wherever randomness (or "luck") is expected to play a role. Thus, we see it in everything from sports to public policy^[This also seems to be the reason why so many bands appear to suffer from "second album syndrome" or "[sophomore slump](https://en.wikipedia.org/wiki/Sophomore_slump)".]. This is a problem because human beings are inclined to find amazing patterns when they look at randomness. Obviously, this is mostly harmless when, for example, the source of randomness is clouds in the sky and the patterns we find take the form of "a cow" or "a face"^[See: [**pareidolia**](https://en.wikipedia.org/wiki/Pareidolia).]. But in other settings, this same phenomena can become worrisome.
+
+**An exercise in simulation**^[This my solution to an exercise taken directly from _Regression and Other Stories_ (exercise 6.7).]
+
+A very famous real-world example is contained in an article titled _On the psychology of prediction_ (Tversky & Kahneman, 1973):
+
+> The instructors in a flight school adopted a policy of consistent positive reinforcement recommended by psychologists. They verbally reinforced each successful execution of a flight maneuver. After some experience with this training approach, the instructors claimed that contrary to psychological doctrine, __high praise for good execution of complex maneuvers typically results in a decrement of performance on the next try__. What should the psychologist say in response?
+
+To answer this question we simulate data from 500 pilots, each of whom performs two maneuvers, and with each maneuver scored continuously on a 0-10 scale. Each pilot has a "true ability" that is unchanged during the two tasks, and the score for each test is equal to this true ability plus an independent error. Pilots get praised when they score higher than 7 during the first maneuver, and receive negative reinforcement when they score lower than 3.
+
+The connection between this example and Galton's study is not obvious at first glance. Here, each pilot's score exhibits regression to her "true ability", in the sense that we expect "luck" to play an important role. As before, we don't really expect these "true abilities" to remain constant over time. In fact that would defeat the entire purpose of flight school. But we do expect these underlying abilities to change _very slowly_.
+
+Note that we make sure, by design, that __reinforcement has no effect on performance on the second task.__
+
+```{r, preview=TRUE}
+N <- 500
+true_abilities <- rnorm(N, 0, 1)
+# mapping the true abilities + random noise to a [0,10] scale
+task1 <- plogis(true_abilities + rnorm(N, 0, 0.5)) * 10
+task2 <- plogis(true_abilities + rnorm(N, 0, 0.5)) * 10
+
+df <- tibble(true_abilities, task1, task2) %>% 
+  mutate(reinforcement = case_when(
+    task1 < 3 ~ "negative",
+    task1 > 7 ~ "positive",
+    TRUE ~ "neutral"))
+
+df %>% 
+  ggplot(aes(x = task1, y = task2, color = reinforcement)) +
+  geom_point() +
+  scale_color_manual(values = c("pink", "grey", "skyblue")) +
+  scale_x_continuous(breaks = seq(2, 10, 2)) +
+  scale_y_continuous(breaks = seq(2, 10, 2))
+```
+
+We can now compute the average change in scores for each group of pilots, which the instructors interpret to be the causal effect of reinforcement.
+
+```{r}
+df %>% 
+  mutate(change = task2 - task1) %>% 
+  group_by(reinforcement) %>% 
+  summarise(
+    effect = mean(change),
+    se = sd(change) / sqrt(n())
+    ) %>% 
+  ggplot(aes(x = reinforcement, y = effect)) +
+  geom_pointrange(aes(
+    ymin = effect + qnorm(p = 0.025)*se,
+    ymax = effect + qnorm(p = 0.975)*se
+    )) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  coord_flip()
+```
+
+Notice that, on average, the pilots who were praised did worse on the second task, whereas the pilots who received negative reinforcement did better. But we know that such effect doesn't exist. And we know this because we _created_ these data so that _task 1_ and _task 2_ were unrelated. The "causal pattern" we have just observed is a consequence of the noise in the data^[We could also follow Judea Pearl's causal framework and say that there's a _back-door_ between _task 1_ and _task 2_ due to the fact that we have failed to condition on "true abilities".]. Pilots who scored very well on _task 1_ are likely to have a higher skill _and also_ to have been somewhat lucky. Thus, it makes sense that they perform slightly worse on _task 2_.
+
+This is how Tversky and Kahneman (1982) explain it:
+
+> Regression is inevitable in flight maneuvers because performance is not perfectly reliable and progress between successive maneuvers is slow. Hence, pilots who did exceptionally well on one trial are likely to deteriorate on the next, regardless of the instructors' reaction to the initial success. The experienced flight instructors actually discovered the regression but attributed it to the detrimental effect of positive reinforcement. __This true story illustrates a saddening aspect of the human condition. We normally reinforce others when their behavior is good and punish them when their behavior is bad. By regression alone, therefore, they are most likely to improve after being punished and most likely to deteriorate after being rewarded.__
+

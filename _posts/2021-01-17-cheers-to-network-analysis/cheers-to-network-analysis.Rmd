@@ -1,0 +1,43 @@
+---
+title: "cheers to network analysis"
+description: |
+  Here are some reasons why I think network analysis holds a very special place in sociological theory.
+author:
+  - name: andrés
+categories:
+  - networks
+  - sociology
+date: 01-17-2021
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+1. The vocabulary is almost standardized, mostly (but not exclusively) thanks to mathematical formalism.
+
+    Nobody will reinvent stuff like "the strength of weak ties", "brokerage", "two-mode networks", "homophily", "structural balance", etc. 
+    
+    This provides two things that I've found to be lacking in sociological theory: (1) navigating the literature a lot easier and (2) there's more room for cumulative progress.
+    
+    Even sociologists who do qualitative research can benefit greatly from the standardized vocabulary of network theory and its implications (e.g. Mario Small's _Someone to Talk to_).
+    
+2. Due to its formal nature, it allows for generalizability (or portability) like no other sociological theory. 
+
+3. It's aesthetically pleasing.
+
+4. It has no ASA section. Network scholars are all over the place. They bridge together different substantive areas of research through a shared set of ideas.
+
+    This might mean that there's no real overall network "theory" out there (i.e. the only theory it has is that _structure matters_). But it's certainly theoretical and it, thus, lends itself to all kinds of middle-range theories.
+
+What might _troublesome_ about network analysis? 
+
+The field of network analysis has a long interdisciplinary history in sociology, anthropology, psychology, and mathematics. Due to advances in computation —and the creation of the Internet— the ability to collect network information has greatly increased and we're starting to see the rise of a much broader (but fragmented) field of _network science_. Computers scientists (e.g. Kleinberg), physicists (e.g. Barabassi, Newman), and statisticians (e.g. Snijders, Hancock) have become important new players in the field. As a result, the field has begun to lack a clear integration across theories and methods.
+
+Thus, we appear to be entering a new age of _rediscovery_ in which "hard" scientists overlook the progress made by social scientists (e.g. [here](https://www.scientificamerican.com/article/why-youre-probably-less-popular/), cf. [here](https://www.journals.uchicago.edu/doi/abs/10.1086/229693))
+
+The techniques used for analyzing social networks require a fair bit of specialization and this might push sociological problems to the background. This is specially true of novices —like myself— and people coming from the broader world of network science.
+
+
+
