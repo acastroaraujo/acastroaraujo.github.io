@@ -19,11 +19,11 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+In qualitative research, it's increasingly common to hear about abduction in the context of **theorization**. In quantitative research it's increasingly common to hear about abduction in the context of **adjudication.**
+
 From the Stanford Encyclopedia of Philosophy: [-@douven2017]:
 
 > In the philosophical literature, the term "abduction" is used in two related but different senses. In both senses, the term refers to some form of explanatory reasoning. However, in the historically first sense, it refers to the place of explanatory reasoning in **generating hypotheses**, while in the sense in which it is used most frequently in the modern literature it refers to the place of explanatory reasoning in justifying hypotheses. In the latter sense, abduction is also often called "**Inference to the Best Explanation**."
-
-In qualitative research, it's increasingly common to hear about abduction in the context of **theorization**. In quantitative research it's increasingly common to hear about abduction in the context of **adjudication.**
 
 ## What is abduction?
 
@@ -78,7 +78,7 @@ From the Stanford Encyclopedia of Philosophy: [-@douven2017]:
 
 **Abduction:**
 
-Given evidence $E$ and candidate explanations $H_1, ..., H_n$ of $E$, if $H_i$ explains $E$ better than any of the other hypotheses, infer that $H_i$ is closer to the truth than any of the other hypotheses.
+> Given evidence $E$ and candidate explanations $H_1, ..., H_n$ of $E$, if $H_i$ explains $E$ better than any of the other hypotheses, infer that $H_i$ is closer to the truth than any of the other hypotheses.
 
 ### Forward and reverse causal inference
 
