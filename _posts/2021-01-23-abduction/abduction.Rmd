@@ -1,0 +1,105 @@
+---
+title: "abduction"
+description: |
+  Two ways in which the word "abduction" is being used in sociology
+author:
+  - name: andrés
+categories:
+  - abduction
+  - sociology
+  - statistics
+date: 01-23-2021
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+From the Stanford Encyclopedia of Philosophy: [-@douven2017]:
+
+> In the philosophical literature, the term "abduction" is used in two related but different senses. In both senses, the term refers to some form of explanatory reasoning. However, in the historically first sense, it refers to the place of explanatory reasoning in **generating hypotheses**, while in the sense in which it is used most frequently in the modern literature it refers to the place of explanatory reasoning in justifying hypotheses. In the latter sense, abduction is also often called "**Inference to the Best Explanation**."
+
+In qualitative research, it's increasingly common to hear about abduction in the context of **theorization**. In quantitative research it's increasingly common to hear about abduction in the context of **adjudication.**
+
+## What is abduction?
+
+### Theorization
+
+[@timmermans2012]:
+
+> The Latin etymology of *abduction* suggests a leading away. In the context of research, abduction refers to an inferential creative process of producing new hypotheses and theories based on surprising research evidence. A researcher is led away from old to new theoretical insights.
+
+> Abduction has a logical form distinct from induction and deduction.
+
+*Deduction:*
+
+> Deductive reasoning begins with a rule and proceeds through a case to arrive at an observed result, which either demonstrates the rule or falsifies it. Thus, the general form of deduction is as follows:
+
+$$ 
+\begin{align}
+&\text{All A are B.} \\
+&\text{C is A.} \\
+&\text{Thus, C is B.}
+\end{align}
+$$
+
+*Induction:*
+
+> Induction, in contrast, starts with a collection of given cases and proceeds by examining their implied results to develop an inference that some universal rule is operative:
+
+$$
+\begin{align}
+&\text{All observed A are C.} \\
+&\text{Thus, all A are C.}
+\end{align}
+$$
+
+*Abduction:*
+
+> Last, abduction starts with consequences and then constructs reasons:
+
+$$
+\begin{align}
+&\text{The surprising fact C is observed.} \\
+&\text{But if A were true, C would be a matter of course.} \\
+&\text{Hence, there is a reason to suspect that A is true. } 
+\end{align}
+$$
+
+### Adjudication
+
+From the Stanford Encyclopedia of Philosophy: [-@douven2017]:
+
+> ...the best way to distinguish between induction and abduction is this: both are *ampliative*, meaning that the conclusion goes beyond what is (logically) contained in the premises (which is why they are non-necessary inferences), but **in abduction there is an implicit or explicit appeal to explanatory considerations**, whereas in induction there is not; in induction, there is only an appeal to observed frequencies or statistics.
+
+**Abduction:**
+
+Given evidence $E$ and candidate explanations $H_1, ..., H_n$ of $E$, if $H_i$ explains $E$ better than any of the other hypotheses, infer that $H_i$ is closer to the truth than any of the other hypotheses.
+
+### Forward and reverse causal inference
+
+Interestingly enough, I believe there *is* an equivalent to *abduction-as-theorization* in quantitative research. This is related to the distinction between "effects of causes" (*forward causal questions*) and "causes of effects" (*reverse causal inference*).
+
+@gelman2020 [pp. 446-8]:
+
+- Causal statements: 
+
+    > __Effects of causes.__ What might happen if we do $z$? What is the effect of some manipulation, for example, the effect of job training on poverty status, the effect of smoking on health, the effect of schooling on earnings, the effect of campaigns on election outcomes, and so forth?
+
+- Causal questions:
+
+    >__Causes of effects.__ What causes $y$? Why do more attractive people earn more money? Why does per capita income vary so much by country? Why do many poor people vote for Republicans and rich people vote for Democrats? Why do some economies collapse while others thrive?
+
+When methodologists write about causal inference, they usually focus on _causal statements_. But @gelman2020 argue that _causal questions_ can be understood within traditional statistical frameworks as part of __model checking and hypothesis generation__.
+
+In other words, they argue that we should really focus on _anomalies_ (or "surprises").
+
+> This is the pattern: a quantitative analyst notices an anomaly, a pattern that cannot be explained by current models. The "causes of effects" question is: Why did this happen? And this can motivate improved modeling and data collection.
+
+> A reverse question places a focus on an _anomaly_ —an aspect of the data unlikely to be reproducible by the current (possibly implicit) model— and points toward possible directions of model improvement.
+
+
