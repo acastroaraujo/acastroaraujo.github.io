@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://acastroaraujo.github.io/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,635 +85,41 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>andrés castro araújo: acastroaraujo</title>
+  <title>The Meaning of 'Theory'</title>
+
+  <meta property="description" itemprop="description" content="Gabriel Abend tries to bring some clarity to the &quot;theory&quot; field"/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-01-25"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-01-25"/>
+  <meta name="article:author" content="andrés"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="andrés castro araújo: acastroaraujo"/>
+  <meta property="og:title" content="The Meaning of &#39;Theory&#39;"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Gabriel Abend tries to bring some clarity to the &quot;theory&quot; field"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="andrés castro araújo"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="andrés castro araújo: acastroaraujo"/>
+  <meta property="twitter:title" content="The Meaning of &#39;Theory&#39;"/>
+  <meta property="twitter:description" content="Gabriel Abend tries to bring some clarity to the &quot;theory&quot; field"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=The meaning of ‘theory’;citation_publication_date=2008;citation_volume=26;citation_author=Gabriel Abend"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["acastroaraujo"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","categories","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["The Meaning of 'Theory'"]},{"type":"character","attributes":{},"value":["Gabriel Abend tries to bring some clarity to the \"theory\" field\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["andrés"]}]}]},{"type":"character","attributes":{},"value":["theory","sociology"]},{"type":"character","attributes":{},"value":["01-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["references.bib","the-meaning-of-theory_files/anchor-4.2.2/anchor.min.js","the-meaning-of-theory_files/bowser-1.9.3/bowser.min.js","the-meaning-of-theory_files/distill-2.2.21/template.v2.js","the-meaning-of-theory_files/header-attrs-2.6/header-attrs.js","the-meaning-of-theory_files/jquery-1.11.3/jquery.min.js","the-meaning-of-theory_files/popper-2.6.0/popper.min.js","the-meaning-of-theory_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-meaning-of-theory_files/tippy-6.2.7/tippy-light-border.css","the-meaning-of-theory_files/tippy-6.2.7/tippy.css","the-meaning-of-theory_files/tippy-6.2.7/tippy.umd.min.js","the-meaning-of-theory_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2029,737 +1434,110 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-  </style>
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-  @import url('https://fonts.googleapis.com/css2?family=Amiri');
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code');
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      40px;
-    --body-size:       1rem;
-    --code-size:       12px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    "Amiri", sans-serif;
-    --mono-font:       "Fira Code", "Monaco", monospace;
-    --body-font:       "Amiri", "Times New Roman", serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-font:    sans-serif;
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       #485054;
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #d8f1ff;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #d8f1ff;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-
-  .posts-list > h1 {
-      display: none;  /* I find that having a title in the index.Rmd is redundant*/
-  }
-
-  .sidebar-section.categories > ul > li:first-child {
-    display: none;
-  }
-
-  /* I don't think this is working: */
-
-  d-article p, d-article ul, d-article ol, d-article blockquote {
-      font-size: 0.9rem;
-  }
-
-  summary {
-    font-size: 0.8rem;
-  }
-
-  .footnote-container {
-      padding: 30px;
-  }</style>
-  <style type="text/css">
-  /* base style */
-
-  /* FONT FAMILIES */
-
-  :root {
-    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-
-  body,
-  .posts-list .post-preview p,
-  .posts-list .description p {
-    font-family: var(--body-font), var(--body-default);
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .posts-list .post-preview h2,
-  .posts-list .description h2 {
-    font-family: var(--heading-font), var(--heading-default);
-  }
-
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-family: var(--mono-font), var(--mono-default);
-  }
-
-
-  /*-- TITLE --*/
-  d-title h1,
-  .posts-list > h1 {
-    color: var(--title-color, black);
-  }
-
-  d-title h1 {
-    font-size: var(--title-size, 50px);
-  }
-
-  /*-- HEADERS --*/
-  d-article h1,
-  d-article h2,
-  d-article h3,
-  d-article h4,
-  d-article h5,
-  d-article h6 {
-    color: var(--header-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- BODY --*/
-  d-article > p,  /* only text inside of <p> tags */
-  d-article > ul, /* lists */
-  d-article > ol {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-    font-size: var(--body-size, 1.06rem);
-  }
-
-
-  /*-- CODE --*/
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-size: var(--code-size, 14px);
-  }
-
-  /*-- ASIDE --*/
-  d-article aside {
-    font-size: var(--aside-size, 12px);
-    color: var(--aside-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- FIGURE CAPTIONS --*/
-  figure .caption,
-  figure figcaption,
-  .figure .caption {
-    font-size: var(--fig-cap-size, 13px);
-    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- METADATA --*/
-  d-byline h3 {
-    font-size: var(--heading-size, 0.6rem);
-    color: var(--heading-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-byline {
-    font-size: var(--body-size, 0.8rem);
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  d-byline a,
-  d-article d-byline a {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- TABLE OF CONTENTS --*/
-  .d-contents nav h3 {
-    font-size: var(--heading-size, 18px);
-  }
-
-  .d-contents nav a {
-    font-size: var(--contents-size, 13px);
-  }
-
-  /*-- APPENDIX --*/
-  d-appendix h3 {
-    font-size: var(--heading-size, 15px);
-    color: var(--heading-color, rgba(0, 0, 0, 0.65));
-  }
-
-  d-appendix {
-    font-size: var(--text-size, 0.8em);
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-appendix d-footnote-list a.footnote-backlink {
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  .distill-site-header .title {
-    font-size: var(--title-size, 18px);
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a,
-  .nav-dropdown .nav-dropbtn {
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    font-size: var(--text-size, 15px);
-  }
-
-  .distill-site-header a:hover,
-  .nav-dropdown:hover .nav-dropbtn {
-    color: var(--hover-color, white);
-  }
-
-  .distill-site-header {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer a:hover {
-    color: var(--hover-color, white);
-  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="the-meaning-of-theory_files/header-attrs-2.6/header-attrs.js"></script>
+  <script src="the-meaning-of-theory_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="the-meaning-of-theory_files/popper-2.6.0/popper.min.js"></script>
+  <link href="the-meaning-of-theory_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="the-meaning-of-theory_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="the-meaning-of-theory_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="the-meaning-of-theory_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="the-meaning-of-theory_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="the-meaning-of-theory_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="the-meaning-of-theory_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"acastroaraujo","authors":[]}
+{"title":"The Meaning of 'Theory'","description":"Gabriel Abend tries to bring some clarity to the \"theory\" field","authors":[{"author":"andrés","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-01-25T00:00:00.000+00:00","citationText":"andrés, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">andrés castro araújo</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="about.html">about</a>
-<a href="https://twitter.com/acastroaraujo">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
-<a href="https://scholars.duke.edu/person/andres.castro.araujo">
-<i class="fas fa-graduation-cap" aria-hidden="true"></i>
-</a>
-<a href="https://github.com/acastroaraujo/">
-<i class="fab fa-github" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="acastroaraujo">acastroaraujo</h1>
-<a href="posts/2021-01-26-agency/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["sociology"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 26, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-01-26-agency/images/diagram.png"/>
-</div>
-<div class="description">
-<h2>What is Agency?</h2>
-<div class="dt-tags">
-<div class="dt-tag">sociology</div>
-</div>
-<p>The never ending debate</p>
-</div>
-</a>
-<a href="posts/2021-01-25-the-meaning-of-theory/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["theory","sociology"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 25, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail"></div>
-<div class="description">
-<h2>The Meaning of 'Theory'</h2>
-<div class="dt-tags">
-<div class="dt-tag">theory</div>
-<div class="dt-tag">sociology</div>
-</div>
-<p>Gabriel Abend tries to bring some clarity to the "theory" field</p>
-</div>
-</a>
-<a href="posts/2021-01-24-optimization-in-r/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 24, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-01-24-optimization-in-r/optimization-in-r_files/figure-html5/unnamed-chunk-2-1.png"/>
-</div>
-<div class="description">
-<h2>Optimization in R</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-</div>
-<p>A few different ways to do optimization</p>
-</div>
-</a>
-<a href="posts/2021-01-23-abduction/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["abduction","sociology","statistics"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 23, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>abduction</h2>
-<div class="dt-tags">
-<div class="dt-tag">abduction</div>
-<div class="dt-tag">sociology</div>
-<div class="dt-tag">statistics</div>
-</div>
-<p>Two ways in which the word "abduction" is being used in sociology</p>
-</div>
-</a>
-<a href="posts/2021-01-19-un-paquete-para-analizar-sentencias-de-la-corte-constitucional/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Colombia"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-01-19-un-paquete-para-analizar-sentencias-de-la-corte-constitucional/distill-preview.png"/>
-</div>
-<div class="description">
-<h2>analizando sentencias de la Corte Constitucional</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Colombia</div>
-</div>
-<p>un ejemplo de cómo usar el paquete ccc</p>
-</div>
-</a>
-<a href="posts/2021-01-17-cheers-to-network-analysis/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["networks","sociology"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 17, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>cheers to network analysis</h2>
-<div class="dt-tags">
-<div class="dt-tag">networks</div>
-<div class="dt-tag">sociology</div>
-</div>
-<p>Here are some reasons why I think network analysis holds a very special place in sociological theory.</p>
-</div>
-</a>
-<a href="posts/2021-01-15-regression-to-the-mean/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["statistics","causality"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 15, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-01-15-regression-to-the-mean/distill-preview.png"/>
-</div>
-<div class="description">
-<h2>regression to the mean</h2>
-<div class="dt-tags">
-<div class="dt-tag">statistics</div>
-<div class="dt-tag">causality</div>
-</div>
-<p>a visual explanation</p>
-</div>
-</a>
-<a href="posts/2021-01-15-hello-world/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 14, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">andrés</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2021-01-15-hello-world/distill-preview.png"/>
-</div>
-<div class="description">
-<h2>hello world</h2>
-<div class="dt-tags"></div>
-<p></p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(8)</span>
-</li>
-<li>
-<a href="#category:abduction">abduction</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:causality">causality</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Colombia">Colombia</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:networks">networks</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:R">R</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:sociology">sociology</a>
-<span class="category-count">(4)</span>
-</li>
-<li>
-<a href="#category:statistics">statistics</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:theory">theory</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>acastroaraujo</h1>
+<h1>The Meaning of ‘Theory’</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">theory</div>
+<div class="dt=tag">sociology</div>
+</div>
 <!--/radix_placeholder_categories-->
-
+<p><p>Gabriel Abend tries to bring some clarity to the “theory” field</p></p>
 </div>
 
+<div class="d-byline">
+  andrés  
+  
+<br/>01-25-2021
+</div>
 
 <div class="d-article">
+<p>In <em>The Meaning of ‘Theory’</em> <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">2008</a>)</span> Gabriel Abend points out that there are certain questions about sociological theory —what <em>is</em> theory? what is a <em>good</em> theory? what is theory <em>for</em>?— that we can’t even begin to answer unless we agree on what we mean by ‘theory’ in the first place.</p>
+<p>He finds at least seven <strong>types</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of ‘theory’ in sociology:</p>
+<ul>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_1\)</span> deals with very general propositions that are usually expressed with ‘universal quantification’ (<span class="math inline">\(\forall x\)</span>in some domain, some general statement about <span class="math inline">\(x\)</span>’). The relationships between variables are <em>general</em>, independent of things like time and place.</p></li>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_2\)</span> deals with <em>explanations</em> of particular social phenomena. Note that this meaning of ‘theory’ is compatible with many approaches to epistemology. For example, the <em>deductive-nomological mode</em>l of explanation posits that theory<span class="math inline">\(_2\)</span> should be subsumed under theory<span class="math inline">\(_1\)</span>. But this isn’t necessary and many proponents of theory<span class="math inline">\(_2\)</span> (e.g. middle-range theorists) are happy to see theory<span class="math inline">\(_1\)</span> as a misguided project.</p></li>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_3\)</span> deals with ‘original interpretations,’ ‘ways of making sense’ or ‘shedding light’ on particular social phenomena. Think about Durkheim’s ‘religious theory of society,’ Du Bois’ description of ‘double consciousness,’ or Simmel’s depiction of <em>The Metropolis and Mental Life</em>.</p>
+<blockquote>
+<p>Unlike theory<span class="math inline">\(_1\)</span>, theory<span class="math inline">\(_3\)</span> does not view [certain phenomenon] <span class="math inline">\(P\)</span> as the value of a variable <span class="math inline">\(y\)</span>, which in turn is related to other variables in such a way that can be described by a function <span class="math inline">\(y = F(x_1, x_2,..., x_n)\)</span>. Unlike theory<span class="math inline">\(_2\)</span>, theory<span class="math inline">\(_3\)</span> <em>may</em> or <em>may not</em> causally explain <span class="math inline">\(P\)</span> <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 178</a>)</span></p>
+</blockquote></li>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_4\)</span> deals with the exegesis of “sacred texts” in sociology (e.g. Marx, Weber, Durkheim, Simmel, Bourdieu). When people add the ‘classical’ adjective to ‘theory’ they’re usually talking about theory<span class="math inline">\(_4\)</span>.</p></li>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_5\)</span> refers to “an overall perspective from which one sees and interprets the world. Unlike theories<span class="math inline">\(_1\)</span>, theories<span class="math inline">\(_2\)</span>, and theories<span class="math inline">\(_3\)</span>, theories<span class="math inline">\(_5\)</span> are not about the social world itself, but about how to look at, grasp, and represent it” <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 179</a>)</span>. In other words, theory<span class="math inline">\(_5\)</span> is concerned with concepts and vocabulary in the abstract.</p>
+<blockquote>
+<p>In its ideal-typical form, the core of a theory<span class="math inline">\(_5\)</span> does not have truth-values.</p>
+</blockquote>
+<blockquote>
+<p>Rather, they offer a way of looking at it or a way of talking about it (e.g., ‘Society can be thought of as a system’ or ‘The social world can be understood as containing objects with properties and variables with values’). Indeed, there are interesting similarities between theory<span class="math inline">\(_5\)</span> and Kant’s categories of understanding. Theory<span class="math inline">\(_5\)</span> can be seen as providing one with an <em>a priori</em> framework (scheme, grid, map, net, plan), a framework that is independent from experience, logically prior to any contact with the social world <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 180</a>)</span></p>
+</blockquote></li>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_6\)</span> refers “to accounts that have a fundamental normative component.”</p>
+<blockquote>
+<p>For example, the contemporary projects of ‘critical theory,’ ‘feminist theory,’ and ‘postcolonial theory’ are explicitly normative ones, which usually reject the fact/value dichotomy, and hence the supposedly value-neutral sociological theory <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 180</a>)</span></p>
+</blockquote>
+<p>Sometimes this brand of theory gets called “social theory.”</p></li>
+<li><p><strong><em>Theory</em></strong><span class="math inline">\(_7\)</span> deals with “special problems” (e.g. ‘the problem of social order,’ ‘micro-macro,’ ‘structure agency,’ ‘interpretation’ and ‘explanation’) that can’t be resolved empirically. They are conceptual problems.</p>
+<blockquote>
+<p>They may be described as ‘philosophical’ problems, insofar as they call for reflection upon the nature of knowledge, language, and reality, and some sort of <strong>conceptual analysis</strong> <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 181</a>)</span></p>
+</blockquote>
+<p>Abend’s own article belongs to this type of theory.</p></li>
+</ul>
+<aside>
+<p>Abend argues that this classification scheme is <em>not</em> a typology because there’s no <em>underlying</em> concept of theory out of which we can identify different kinds. He calls this the “Socratic error”: <em>the belief that theory is an object out there that our concepts or language can track down</em>.</p>
+</aside>
+<p>Abend argues that having this typology in mind can help solve the very common issue of sociologists talking past each other. He gives a very compelling pair of examples.</p>
+<blockquote>
+<p>…sociologists’ arguments about ‘theory’—that is, about theory in general; about its nature, methods, quality, aims, and possibilities— are neither as clear nor as fruitful as they should be. And, as one might expect, this state of affairs can lead to unfortunate misunderstandings.</p>
+<p>Let me mention two important examples. Can small-N studies (e.g., ethnographic and historical studies) yield ‘theoretical’ gains? The literature is as vast as it is discordant and inconclusive. On a practical level, one often hears ethnographers and historical sociologists complain about the way in which their manuscripts are judged by mainstream sociology journals. Probably the most common situation is the following: one or more referees say that the manuscript fails to make a ‘theoretical contribution’ or to ‘advance theory,’ often on the grounds that if your number of cases is one you cannot derive ‘theoretical conclusions.’ Ethnographers and historical sociologists respond that you can, and that the idea that you cannot reflects a bias in favor of quantitative sociology. And so on. But if my argument is correct, there is no genuine disagreement here. If your number of cases is one, you <em>obviously</em> cannot derive theoretical<span class="math inline">\(_1\)</span> conclusions. It is even dubious that a single case can ‘suggest’ (as we saw above, a very common way of putting it) theoretical<span class="math inline">\(_1\)</span> conclusions. What is more, if it is accepted that a theory<span class="math inline">\(_1\)</span> establishes a probabilistic rather than a deterministic relationship, a single case cannot even disprove it (Lieberson 1991, 1992). But from an ethnographic or historical study you <em>obviously</em> can derive theoretical<span class="math inline">\(_2\)</span> and theoretical<span class="math inline">\(_3\)</span> conclusions. In fact, sometimes it might be the best or the only way to obtain such ‘theories.’</p>
+<p>Similarly, sociologists have long quarreled over the proper relationship between ‘sociological theory’ and ‘empirical research’ […] Some of them argue that ‘theory’ ought to be ‘based on,’ ‘close to,’ ‘linked to,’ ‘derived from,’ ‘in dialogue with,’ or ‘intimately related to’ empirical research or empirical data. Some others argue that this is not so, or not necessarily so. Again, it is clear that theory<span class="math inline">\(_1\)</span>, theory<span class="math inline">\(_2\)</span>, and theory<span class="math inline">\(_3\)</span>, ought to be based on empirical data. On what other bases could one possibly make an argument about the conditions under which ethnic minorities tend to assimilate? How else could one work out an explanation of the rise and triumph of capitalism? However, the same is not true of other senses of ‘theory’ —for example, if one’s aim is to rid a sociological concept of some muddles, propose a new standpoint from which to look at social relations, unveil a writer’s general presuppositions, or explore the connections between Adam Smith’s well-known political economy and his less well-known moral philosophy <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 183</a>)</span>.</p>
+</blockquote>
+<h2 id="it-should-really-be-6-types">It should really be 6 types</h2>
+<p>In my opinion, Abend should have removed theory<span class="math inline">\(_4\)</span> from his typology and just use the label ‘<strong>classical theory</strong>.’ There are two reasons for doing this. First, every classical theorist worth reading has engaged in some combination of <em>all</em> these types of ‘theory’ (perhaps most notably Marx). Second, according to Abend, people who do ‘classical theory’ aren’t really doing ‘theoretical work’:</p>
+<blockquote>
+<p>If the expressions ‘have a theory,’ ‘have developed a theory,’ or ‘put forward a theory’ occur in a sentence, the word ‘theory’ is not being used in the sense of theory<span class="math inline">\(_4\)</span>. Strangely, the predicate ‘(be) a theory<span class="math inline">\(_4\)</span>’ cannot be applied to the content of a theory<span class="math inline">\(_4\)</span> paper, to the product of the activity of doing theory<span class="math inline">\(_4\)</span>, or to the work of a theorist<span class="math inline">\(_4\)</span> <span class="citation" data-cites="abend2008">(<a href="#ref-abend2008" role="doc-biblioref">Abend 2008, 179</a>)</span>.</p>
+</blockquote>
+<p>Abend doesn’t reach this same conclusion because he has tied his hands in advance. His “lexicographic” approach forbids him from committing to an <em>a priori</em> concept of what ‘theory’ is. But it’s obvious that theories 1 through 7 exist within ‘classical theory.’ I also think it <em>ought</em> to be the case that any outcome of ‘theorizing’ should receive the label of ‘theory’ (whatever that means, pick a number).</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-abend2008" class="csl-entry" role="doc-biblioentry">
+Abend, Gabriel. 2008. <span>“The Meaning of <span>‘</span>Theory<span>’</span>.”</span> <em>Sociological Theory</em> 26 (2): 173199.
+</div>
+</div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>I think it’s a little silly to say we can’t call this a <em>typology</em>. It amounts to saying, for example, that we can’t talk about ‘types of music.’ At one point he even refers to theory$_5$ in its ‘ideal-typical’ form. At another point he calls $t_1$, …, $t_7$ ‘competing views’ about what ‘theory’ _is_, even though he recognizes that there are many affinities between some of them —this means that they’re not really all ‘competing’ with each other.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2767,11 +1545,23 @@ function init_posts_list() {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

@@ -1,0 +1,75 @@
+---
+title: "The Meaning of 'Theory'"
+description: |
+  Gabriel Abend tries to bring some clarity to the "theory" field
+author:
+  - name: andrés
+categories:
+  - theory
+  - sociology
+date: 01-25-2021
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In *The Meaning of 'Theory'* [-@abend2008] Gabriel Abend points out that there are certain questions about sociological theory ---what *is* theory? what is a *good* theory? what is theory *for*?--- that we can't even begin to answer unless we agree on what we mean by 'theory' in the first place.
+
+He finds at least seven **types**[^1] of 'theory' in sociology:
+
+[^1]: I think it's a little silly to say we can't call this a *typology*. It amounts to saying, for example, that we can't talk about 'types of music'. At one point he even refers to theory\$\_5\$ in its 'ideal-typical' form. At another point he calls \$t_1\$, ..., \$t_7\$ 'competing views' about what 'theory' \_is\_, even though he recognizes that there are many affinities between some of them ---this means that they're not really all 'competing' with each other.
+
+-   ***Theory***$_1$ deals with very general propositions that are usually expressed with 'universal quantification' ($\forall x$in some domain, some general statement about $x$'). The relationships between variables are *general*, independent of things like time and place.
+
+-   ***Theory***$_2$ deals with *explanations* of particular social phenomena. Note that this meaning of 'theory' is compatible with many approaches to epistemology. For example, the *deductive-nomological mode*l of explanation posits that theory$_2$ should be subsumed under theory$_1$. But this isn't necessary and many proponents of theory$_2$ (e.g. middle-range theorists) are happy to see theory$_1$ as a misguided project.
+
+-   ***Theory***$_3$ deals with 'original interpretations', 'ways of making sense' or 'shedding light' on particular social phenomena. Think about Durkheim's 'religious theory of society', Du Bois' description of 'double consciousness', or Simmel's depiction of *The Metropolis and Mental Life*.
+
+    > Unlike theory$_1$, theory$_3$ does not view [certain phenomenon] $P$ as the value of a variable $y$, which in turn is related to other variables in such a way that can be described by a function $y = F(x_1, x_2,..., x_n)$. Unlike theory$_2$, theory$_3$ *may* or *may not* causally explain $P$ [@abend2008, pp. 178]
+
+-   ***Theory***$_4$ deals with the exegesis of "sacred texts" in sociology (e.g. Marx, Weber, Durkheim, Simmel, Bourdieu). When people add the 'classical' adjective to 'theory' they're usually talking about theory$_4$.
+
+-   ***Theory***$_5$ refers to "an overall perspective from which one sees and interprets the world. Unlike theories$_1$, theories$_2$, and theories$_3$, theories$_5$ are not about the social world itself, but about how to look at, grasp, and represent it" [@abend2008, pp. 179]. In other words, theory$_5$ is concerned with concepts and vocabulary in the abstract.
+
+    > In its ideal-typical form, the core of a theory$_5$ does not have truth-values.
+
+    > Rather, they offer a way of looking at it or a way of talking about it (e.g., 'Society can be thought of as a system' or 'The social world can be understood as containing objects with properties and variables with values'). Indeed, there are interesting similarities between theory$_5$ and Kant's categories of understanding. Theory$_5$ can be seen as providing one with an *a priori* framework (scheme, grid, map, net, plan), a framework that is independent from experience, logically prior to any contact with the social world [@abend2008, pp. 180]
+
+-   ***Theory***$_6$ refers "to accounts that have a fundamental normative component."
+
+    > For example, the contemporary projects of 'critical theory,' 'feminist theory,' and 'postcolonial theory' are explicitly normative ones, which usually reject the fact/value dichotomy, and hence the supposedly value-neutral sociological theory [@abend2008, pp. 180]
+
+    Sometimes this brand of theory gets called "social theory".
+
+-   ***Theory***$_7$ deals with "special problems" (e.g. 'the problem of social order', 'micro-macro', 'structure agency', 'interpretation' and 'explanation') that can't be resolved empirically. They are conceptual problems.
+
+    > They may be described as 'philosophical' problems, insofar as they call for reflection upon the nature of knowledge, language, and reality, and some sort of **conceptual analysis** [@abend2008, pp. 181]
+
+    Abend's own article belongs to this type of theory.
+
+<aside>
+
+Abend argues that this classification scheme is *not* a typology because there's no *underlying* concept of theory out of which we can identify different kinds. He calls this the "Socratic error": *the belief that theory is an object out there that our concepts or language can track down*.
+
+</aside>
+
+Abend argues that having this typology in mind can help solve the very common issue of sociologists talking past each other. He gives a very compelling pair of examples.
+
+> ...sociologists' arguments about 'theory'---that is, about theory in general; about its nature, methods, quality, aims, and possibilities--- are neither as clear nor as fruitful as they should be. And, as one might expect, this state of affairs can lead to unfortunate misunderstandings.
+>
+> Let me mention two important examples. Can small-N studies (e.g., ethnographic and historical studies) yield 'theoretical' gains? The literature is as vast as it is discordant and inconclusive. On a practical level, one often hears ethnographers and historical sociologists complain about the way in which their manuscripts are judged by mainstream sociology journals. Probably the most common situation is the following: one or more referees say that the manuscript fails to make a 'theoretical contribution' or to 'advance theory,' often on the grounds that if your number of cases is one you cannot derive 'theoretical conclusions.' Ethnographers and historical sociologists respond that you can, and that the idea that you cannot reflects a bias in favor of quantitative sociology. And so on. But if my argument is correct, there is no genuine disagreement here. If your number of cases is one, you *obviously* cannot derive theoretical$_1$ conclusions. It is even dubious that a single case can 'suggest' (as we saw above, a very common way of putting it) theoretical$_1$ conclusions. What is more, if it is accepted that a theory$_1$ establishes a probabilistic rather than a deterministic relationship, a single case cannot even disprove it (Lieberson 1991, 1992). But from an ethnographic or historical study you *obviously* can derive theoretical$_2$ and theoretical$_3$ conclusions. In fact, sometimes it might be the best or the only way to obtain such 'theories.'
+>
+> Similarly, sociologists have long quarreled over the proper relationship between 'sociological theory' and 'empirical research' [...] Some of them argue that 'theory' ought to be 'based on,' 'close to,' 'linked to,' 'derived from,' 'in dialogue with,' or 'intimately related to' empirical research or empirical data. Some others argue that this is not so, or not necessarily so. Again, it is clear that theory$_1$, theory$_2$, and theory$_3$, ought to be based on empirical data. On what other bases could one possibly make an argument about the conditions under which ethnic minorities tend to assimilate? How else could one work out an explanation of the rise and triumph of capitalism? However, the same is not true of other senses of 'theory' ---for example, if one's aim is to rid a sociological concept of some muddles, propose a new standpoint from which to look at social relations, unveil a writer's general presuppositions, or explore the connections between Adam Smith's well-known political economy and his less well-known moral philosophy [@abend2008, pp. 183].
+
+## It should really be 6 types
+
+In my opinion, Abend should have removed theory$_4$ from his typology and just use the label '**classical theory**'. There are two reasons for doing this. First, every classical theorist worth reading has engaged in some combination of *all* these types of 'theory' (perhaps most notably Marx). Second, according to Abend, people who do 'classical theory' aren't really doing 'theoretical work':
+
+> If the expressions 'have a theory,' 'have developed a theory,' or 'put forward a theory' occur in a sentence, the word 'theory' is not being used in the sense of theory$_4$. Strangely, the predicate '(be) a theory$_4$' cannot be applied to the content of a theory$_4$ paper, to the product of the activity of doing theory$_4$, or to the work of a theorist$_4$ [@abend2008, pp. 179].
+
+Abend doesn't reach this same conclusion because he has tied his hands in advance. His "lexicographic" approach forbids him from committing to an *a priori* concept of what 'theory' is. But it's obvious that theories 1 through 7 exist within 'classical theory'. I also think it *ought* to be the case that any outcome of 'theorizing' should receive the label of 'theory' (whatever that means, pick a number).

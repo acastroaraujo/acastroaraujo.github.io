@@ -7,7 +7,37 @@
     <description>andrés castro araújo — blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What is Agency?</title>
+      <dc:creator>andrés</dc:creator>
+      <link>https://acastroaraujo.github.io/posts/2021-01-26-agency</link>
+      <description>The never ending debate</description>
+      <category>sociology</category>
+      <guid>https://acastroaraujo.github.io/posts/2021-01-26-agency</guid>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://acastroaraujo.github.io/posts/2021-01-26-agency/images/diagram.png" medium="image" type="image/png" width="1506" height="1800"/>
+    </item>
+    <item>
+      <title>The Meaning of 'Theory'</title>
+      <dc:creator>andrés</dc:creator>
+      <link>https://acastroaraujo.github.io/posts/2021-01-25-the-meaning-of-theory</link>
+      <description>Gabriel Abend tries to bring some clarity to the "theory" field</description>
+      <category>theory</category>
+      <category>sociology</category>
+      <guid>https://acastroaraujo.github.io/posts/2021-01-25-the-meaning-of-theory</guid>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Optimization in R</title>
+      <dc:creator>andrés</dc:creator>
+      <link>https://acastroaraujo.github.io/posts/2021-01-24-optimization-in-r</link>
+      <description>A few different ways to do optimization</description>
+      <category>R</category>
+      <guid>https://acastroaraujo.github.io/posts/2021-01-24-optimization-in-r</guid>
+      <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://acastroaraujo.github.io/posts/2021-01-24-optimization-in-r/optimization-in-r_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="960" height="576"/>
+    </item>
     <item>
       <title>abduction</title>
       <dc:creator>andrés</dc:creator>
