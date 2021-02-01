@@ -1,0 +1,83 @@
+---
+title: "Little Robot Engineering"
+description: |
+  Richard McElreath compares statistical procedures to little robots and golems
+author:
+  - name: andrés
+categories:
+  - statistical rethinking
+  - statistics
+  - models
+date: 01-21-2021
+bibliography: bib.bib
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Animated by truth, but lacking free will, a golem always does exactly what it is told.
+
+> Rather than idealized angels of reason, scientific models are powerful clay robots without intent of their own, bumbling along according to the myopic instructions they embody.
+
+> The golem is a prosthesis, doing the measuring for us, performing impressive calculations, finding patterns where none are obvious.
+
+> Statistical golems do not understand cause and effect. They only understand association.
+
+@mcelreath2020 wants us to learn how to build our own robots by drawing on some unified theory of 'golem engineering': *a set of principles for designing, building, refining, and critiquing special-purpose statistical procedures.*
+
+Ultimately, he focuses on four tools that will help in this endeavor:
+
+1.  **Bayesian Data Analysis**. This boils down quantifying uncertainty using probability theory.
+
+    > In modest terms, Bayesian data analysis is no more than counting the numbers of ways the data could happen, according to our assumptions. Things that can happen more ways are more plausible. Probability theory is relevant because probability is just a calculus for counting.
+
+    There's a difference between the **frequentist** and **Bayesian** approaches with respect to *what* gets treated as a random variable.
+
+    Frequentist approaches are premised on the imaginary resampling of data, all probabilities are defined in connection to the long-term frequencies of our estimators; models and parameters cannot have probability distributions, only measurements can[^1].
+
+    Bayesian approaches consider *everything* to be a random variable, all probabilities are defined in connection to *uncertainty.*
+
+    > Bayesian golems treat "randomness" as a property of information, not of the world. Presumably, if we had more information, we could exactly predict everything.
+
+2.  **Model Comparison.** The best way to choose among multiple models is to prefer the one that makes better predictions. But since this requires knowing the future, we have to look elsewhere: *expected predictive accuracy.*
+
+    -   **Information criteria**
+
+    -   **Cross-validation**
+
+    These tools also help us avoid *overfitting* and to identify *highly influential observations.*
+
+3.  **Multilevel Models.** These are models with multiple levels of uncertainty. They're also known as hierarchical, random effects, varying effects, or mixed effects models. These allow us to model all those different data sets that don't comply with the usual **i.i.d.** assumptions in regression models.
+
+    There are for common reasons for using multilevel models [@mcelreath2020, pp. 15]:
+
+    > 1.  *To adjust estimates for repeat sampling.* When more than one observation arises from the same individual, location, or time, then traditional, single-level models may mislead us.
+    > 2.  *To adjust estimates for imbalance in sampling.* When some individuals, locations, or times are sampled more than others, we may also be misled by single-level models.
+    > 3.  *To study variation.* If our research questions include variation among individuals or other groups within the data, then multilevel models are a big help, because they model variation explicitly.
+    > 4.  *To avoid averaging.* Pre-averaging data to construct variables can be dangerous. Averaging removes variation, manufacturing false confidence. Multilevel models preserve the uncertainty in the original, pre-averaged values, while still using the average to make predictions.
+
+    @mcelreath2020 [pp. 15] argues that *multilevel regression deserves to be the default form of regression.*
+
+    > Diverse model types turn out to be multilevel: models for missing data (imputation), measurement error, factor analysis, some time series models, types of spatial and network regression, and phylogenetic regressions all are special applications of the multilevel strategy. And some commonplace procedures, like the paired t-test, are really multilevel models in disguise. Grasping the concept of multilevel modeling may lead to a **perspective shift.** *Suddenly single-level models end up looking like mere components of multilevel models. The multilevel strategy provides an engineering principle to help us to introduce these components into a particular analysis, exactly where we think we need them.*
+
+4.  **Graphical Causal Models.** Note that *models that are causally incorrect can make better predictions than those that are causally correct.* As a result, tools like cross-validation and information criteria can give misleading results.
+
+    To focus on causality means that we focus on a different meaning of "prediction": predicting future outcomes given different interventions or *predicting counterfactuals.* This is also called the **identification** problem.
+
+[^1]: This leads to convoluted statements: "if we were to measure *this* again an infinite number of times, then the *actual* parameter value will fall within this interval 95% of the time".
+
+## Work Flow
+
+In order to build Bayesian models we use a simple design loop [@mcelreath2020, pp. 28]:
+
+> 1.  **Data story:** motivate the model by narrating how the data might arise.
+> 2.  **Update:** Educate your model by feeding it the data.
+> 3.  **Evaluate :** All statistical models require supervision, leading to model expansion.
+
+Note that when evaluating the fit of the model we ask a somewhat vague question: "Does it make sense?".
+
+If it doesn't make sense to you, it's because *you* have extra *information* about the problem. Unsurprisingly, this step involves a the balancing of technique and judgment, guided by the applied context of the problem at hand.
