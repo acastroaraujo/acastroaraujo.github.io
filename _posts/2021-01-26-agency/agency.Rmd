@@ -1,7 +1,7 @@
 ---
 title: "What is Agency?"
 description: |
-  The never ending debate
+  ...
 author:
   - name: andrés
 categories:
@@ -17,11 +17,11 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The word **agency** has been associated with a long list of words: *self-hood*, *motivation*, *will*, *purposiveness*, *intentionality*, *goal-seeking, judgement, deliberation, power, choice*, *initiative*, *freedom*, and *creativity*.
+The word **agency** has been associated with a long list of words: *self-hood*, *motivation*, *will*, *purposiveness*, *intentionality*, *goal-seeking, judgement, deliberation, power, choice*, *initiative*, *freedom*, and *creativity*. Other times "agency" is defined as having the capacity to move and affect the world. Thus, it's reasonable to argue that *everyone* has *some* *form* of agency at any given time ---making agency a human constant just like "having a consciousness". However, it becomes an empirically variable phenomena as soon as we begin to talk more concretely about what agency means.
 
-Usually I don't see the word "agency" thrown as much in sociology anymore, with the exception of how it's used in "life course" and "stress process" literature. Here, "agency" usually refers broadly to *the extent to which individuals control their lives* or the way in which that belief can sometimes be deployed as a resource to cope with stress [see @pearlin2010].
+Usually I don't see the word "agency" thrown as much in sociology anymore, with the exception of how it's used in "life course" and "stress process" literature. Here, "agency" usually refers broadly to *the extent to which individuals control their lives* or the way in which that belief can sometimes be deployed as a resource to cope with stress [see @pearlin2010]. Sometimes "agency theory" might also be used to describe principal-agent relationships ---i.e., relationships that involve some form of delegation [@shapiro2005].
 
-@emirbayer1998 define agency as a *temporally* *embedded process of social engagement* that takes place in different "structural environments" and which reproduces or transforms those structures at the same time. What's different about their approach is their emphasis on how different aspects of "agency" have a different *temporal orientation.* This effort to rethink agency in terms of time is similar in spirit to dual-process theories of culture and cognition (e.g. @lizardo2016, @vaisey2009 )
+@emirbayer1998 define agency as a *temporally* *embedded process of social engagement* that takes place in different "structural environments" and which reproduces or transforms those structures at the same time. What's different about their approach is their emphasis on how different aspects of "agency" have a different *temporal orientation.* This effort to rethink agency in terms of time is similar in spirit to dual-process theories of culture and cognition [e.g. @lizardo2016; @vaisey2009 ].
 
 **The past-future-present elements of human agency:**
 
