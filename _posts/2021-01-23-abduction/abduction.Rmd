@@ -1,5 +1,5 @@
 ---
-title: "abduction"
+title: "Abduction"
 description: |
   Two ways in which the word "abduction" is being used in sociology
 author:

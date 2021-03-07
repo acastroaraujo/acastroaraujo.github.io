@@ -1,0 +1,64 @@
+---
+title: "Agency vs Structure"
+description: |
+  Try to forget about it.
+author:
+  - name: andrés
+categories:
+  - theory
+  - sociology
+date: 03-07-2021
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> I saw the best minds of my generation destroyed by madness, <br>
+> starving hysterical naked, <br>
+> attempting to dissect every social theory into some percentage of agency and structure, <br>
+> there have been no survivors.
+
+The word **agency** has been associated with a long list of words: *self-hood*, *motivation*, *will*, *purposiveness*, *intentionality*, *goal-seeking, judgement, deliberation, power, choice*, *initiative*, *freedom*, and *creativity*. Some times "agency" is defined as having the capacity to move and affect the world. Other times sociologists will argue that *everyone* has *some* *form* of agency at any given time ---making agency a human constant just like "having a consciousness"[^1].
+
+[^1]: Turning "agency" into a constant seems to deprive it from its role as an explanatory concept. But it *does* endow any given situation with a sense of *uncertainty* about any given outcome.
+
+Similarly, the word **structure** is an unavoidable metaphor used in the social sciences.
+
+> The term structure empowers what it designates. Structure, in its nominative sense, always implies structure in its transitive verbal sense. Whatever aspect of social life we designate as structure is posited as "structuring" some other aspect of social existence ---whether it is class that structures politics, gender that structures employment opportunities, rhetorical conventions that structure texts or utterances, or modes of production that structure social formation [@sewelljr1992, pp. 2]
+
+**What determines human behavior? The structure vs agency problem**
+
+This (in)famous philosophical debate usually starts by pitting "structure" vs "agency" as two opposites and ends in resolution when sociologists characterize both structure and agency as two mutually constitutive (thus inseparable) phenomena. This conflation is deployed as some sort of magical incantation: sociologists nod in agreement every time someone utters these words.
+
+There are times in wish to make this whole debate disappear, as I think it isn't a productive way to approach theory.
+
+However, I'd be remiss if I didn't acknowledge at least two important reasons for why this debate keeps creeping back in sociological discourse.
+
+1.  It tends to make sociologists *bad writers,* particularly for two reasons: "the habitual use of passive constructions and abstract nouns" [@becker2008, pp. 8][^2].
+
+    > One problem has to do with agency: who did the things that your sentence alleges were done? Sociologists often prefer locutions that leave the answer to that question unclear, largely because many of their theories don't tell them who is doing what. In many sociological theories, things just happen without anyone doing them. It's hard to find a subject for a sentence when "larger social forces" or "inexorable social processes" are at work [@becker2008, pp. 7-8].
+
+2.  It directly informs our conversations about *causality* in a way that's consistent with what psychologists call "[attribution theory](https://en.wikipedia.org/wiki/Attribution_(psychology))". 
+
+    This also has obvious moral and political implications.
+
+    > Social scientists routinely look for the causes of the phenomena they study; it's the most common way of describing what we do. Moral judgments frequently take the form of assigning blame. Social scientists routinely assign blame by announcing what caused something to happen. If we know what causes something, we know what has to be changed in order to change some social consequence we disapprove of. [@becker2007, pp. 141-2]
+
+    @martin2011 mentions "attribution theory" when discussing some differences that arise between first-person and third-person explanations of social action, which emphasize "freedom of choice" and "constraint" respectively.
+
+    > When we think about others, we incompletely put ourselves in their shoes and do not fully appreciate the situational pressures they face; when we think about ourselves, we may not fully acknowledge that such pressures could be resisted. [@martin2011, pp. 22]
+
+[^2]: Economists encounter similar issues in their writing when they invoke "market forces", "representative agents", "productivity", "equilibrium", among others.
+
+Ultimately ***my own*** thoughts on agency mirror Bruno de Finetti's thoughts on probability. But nobody should keep wasting their time on this.
+
+<aside>
+
+*PROBABILITY DOES NOT EXIST*
+
+</aside>
