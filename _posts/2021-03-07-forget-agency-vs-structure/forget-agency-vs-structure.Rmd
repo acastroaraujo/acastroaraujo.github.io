@@ -18,9 +18,7 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-> I saw the best minds of my generation destroyed by madness, <br>
-> starving hysterical naked, <br>
-> dissecting every social theory in an attempt to allocate some percent to agency and some to structure
+> I saw the best minds of my generation destroyed by madness, <br> starving hysterical naked, <br> dissecting every social theory in an attempt to allocate some percent to agency and some to structure
 
 The word **agency** has been associated with a long list of words: *self-hood*, *motivation*, *will*, *purposiveness*, *intentionality*, *goal-seeking, judgement, deliberation, power, choice*, *initiative*, *freedom*, and *creativity*. Some times "agency" is defined as having the capacity to move and affect the world. Other times sociologists will argue that *everyone* has *some* *form* of agency at any given time ---making agency a human constant just like "having a consciousness"[^1].
 
@@ -30,19 +28,21 @@ Similarly, the word **structure** is an unavoidable metaphor used in the social 
 
 > The term structure empowers what it designates. Structure, in its nominative sense, always implies structure in its transitive verbal sense. Whatever aspect of social life we designate as structure is posited as "structuring" some other aspect of social existence ---whether it is class that structures politics, gender that structures employment opportunities, rhetorical conventions that structure texts or utterances, or modes of production that structure social formation [@sewelljr1992, pp. 2]
 
-**What determines human behavior? The structure vs agency problem**
+The long list associated with **structure** includes: opportunities, resources, constraints, expectations, institutions, organizations, etc. Some sociologists turn structure into agency via some sort of process like Parsonian internalization or Bourdieu's idea of habitus[^2].
 
-This (in)famous philosophical debate usually starts by pitting "structure" vs "agency" as two opposites and ends in resolution when sociologists characterize both structure and agency as two mutually constitutive (thus inseparable) phenomena. This conflation is deployed as some sort of magical incantation: sociologists nod in agreement every time someone utters these words.
+[^2]: Every social science has its own version of "structure". In economics, for example, this imagery is usually invoked in terms "budget constraints" or "choice sets".
 
-There are times in wish to make this whole debate disappear, as I think it isn't a productive way to approach theory.
+**What drives human behavior? The structure / agency problem**
 
-However, I'd be remiss if I didn't acknowledge at least two important reasons for why this debate keeps creeping back in sociological discourse.
+This philosophical debate usually starts by pitting "structure" against "agency" as two opposite and competing forces. The debate usually ends in resolution when sociologists characterize *both* structure *and* agency as two mutually constitutive (thus inseparable) phenomena. This conflation is some sort of magical incantation that makes sociologists nod in agreement every time someone utters these words.
 
-1.  It tends to make sociologists *bad writers,* particularly for two reasons: "the habitual use of passive constructions and abstract nouns" [@becker2008, pp. 8][^2].
+There are times in wish to make this whole debate disappear, as I think it isn't a productive way to approach theory. However, I'd be remiss if I didn't acknowledge at least two important reasons for why this debate keeps creeping back in sociological discourse.
+
+1.  It tends to make sociologists *bad writers,* particularly for two reasons: "the habitual use of passive constructions and abstract nouns" [@becker2008, pp. 8][^3].
 
     > One problem has to do with agency: who did the things that your sentence alleges were done? Sociologists often prefer locutions that leave the answer to that question unclear, largely because many of their theories don't tell them who is doing what. In many sociological theories, things just happen without anyone doing them. It's hard to find a subject for a sentence when "larger social forces" or "inexorable social processes" are at work [@becker2008, pp. 7-8].
 
-2.  It directly informs our conversations about *causality* in a way that's consistent with what psychologists call "[attribution theory](https://en.wikipedia.org/wiki/Attribution_(psychology))". 
+2.  It directly informs our conversations about *causality* in a way that's consistent with what psychologists call "[attribution theory](https://en.wikipedia.org/wiki/Attribution_(psychology))".
 
     This also has obvious moral and political implications.
 
@@ -52,7 +52,7 @@ However, I'd be remiss if I didn't acknowledge at least two important reasons fo
 
     > When we think about others, we incompletely put ourselves in their shoes and do not fully appreciate the situational pressures they face; when we think about ourselves, we may not fully acknowledge that such pressures could be resisted. [@martin2011, pp. 22]
 
-[^2]: Economists encounter similar issues in their writing when they invoke "market forces", "representative agents", "productivity", "equilibrium", among others.
+[^3]: Economists encounter similar issues in their writing when they invoke "market forces", "representative agents", "productivity", "equilibrium", among others.
 
 Ultimately ***my own*** thoughts on agency mirror Bruno de Finetti's thoughts on probability. But nobody should keep wasting their time on this.
 
