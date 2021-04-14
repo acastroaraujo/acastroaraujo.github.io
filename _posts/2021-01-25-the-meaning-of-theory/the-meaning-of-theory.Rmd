@@ -22,7 +22,7 @@ In *The Meaning of 'Theory'* [-@abend2008] Gabriel Abend points out that there a
 
 He finds at least seven **types**[^1] of 'theory' in sociology:
 
-[^1]: I think it's a little silly to say we can't call this a *typology*. It amounts to saying, for example, that we can't talk about 'types of music'. At one point he even refers to theory\$\_5\$ in its 'ideal-typical' form. At another point he calls \$t_1\$, ..., \$t_7\$ 'competing views' about what 'theory' \_is\_, even though he recognizes that there are many affinities between some of them ---this means that they're not really all 'competing' with each other.
+[^1]: I think it's a little silly to say we can't call this a *typology*. It amounts to saying, for example, that we can't talk about 'types of music'. At one point he even refers to theory$_5$ in its 'ideal-typical' form. At another point he calls $t_1$, ..., $t_7$ 'competing views' about what 'theory' *is*, even though he recognizes that there are many affinities between some of them ---this means that they're not really all 'competing' with each other.
 
 -   ***Theory***$_1$ deals with very general propositions that are usually expressed with 'universal quantification' ($\forall x$in some domain, some general statement about $x$'). The relationships between variables are *general*, independent of things like time and place.
 
