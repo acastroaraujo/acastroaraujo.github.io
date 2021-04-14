@@ -34,11 +34,15 @@ He finds at least seven **types**[^1] of 'theory' in sociology:
 
 -   ***Theory***$_4$ deals with the exegesis of "sacred texts" in sociology (e.g. Marx, Weber, Durkheim, Simmel, Bourdieu). When people add the 'classical' adjective to 'theory' they're usually talking about theory$_4$.
 
--   ***Theory***$_5$ refers to "an overall perspective from which one sees and interprets the world. Unlike theories$_1$, theories$_2$, and theories$_3$, theories$_5$ are not about the social world itself, but about how to look at, grasp, and represent it" [@abend2008, pp. 179]. In other words, theory$_5$ is concerned with concepts and vocabulary in the abstract.
+-   ***Theory***$_5$ refers to "an overall perspective from which one sees and interprets the world. Unlike theories$_1$, theories$_2$, and theories$_3$, theories$_5$ are not about the social world itself, but about how to look at, grasp, and represent it" [@abend2008, pp. 179].
+
+    In other words, theory$_5$ is concerned with concepts and vocabulary.
 
     > In its ideal-typical form, the core of a theory$_5$ does not have truth-values.
 
     > Rather, they offer a way of looking at it or a way of talking about it (e.g., 'Society can be thought of as a system' or 'The social world can be understood as containing objects with properties and variables with values'). Indeed, there are interesting similarities between theory$_5$ and Kant's categories of understanding. Theory$_5$ can be seen as providing one with an *a priori* framework (scheme, grid, map, net, plan), a framework that is independent from experience, logically prior to any contact with the social world [@abend2008, pp. 180]
+
+    Like "models", they are simplified representations of reality that highlight some elements of social life and treat others as ignorable.
 
 -   ***Theory***$_6$ refers "to accounts that have a fundamental normative component."
 
@@ -68,8 +72,10 @@ Abend argues that having this typology in mind can help solve the very common is
 
 ## It should really be 6 types
 
-In my opinion, Abend should have removed theory$_4$ from his typology and just use the label '**classical theory**'. There are two reasons for doing this. First, every classical theorist worth reading has engaged in some combination of *all* these types of 'theory' (perhaps most notably Marx). Second, according to Abend, people who do 'classical theory' aren't really doing 'theoretical work':
+In my opinion, Abend should have removed theory$_4$ from his typology and just use the label '**classical theory**'. There are two reasons for doing this. First, every classical theorist worth reading has engaged in some combination of *all* these types of 'theory' (perhaps most notably Marx). Second, people who *do* 'classical theory' aren't really doing 'theoretical work':
 
 > If the expressions 'have a theory,' 'have developed a theory,' or 'put forward a theory' occur in a sentence, the word 'theory' is not being used in the sense of theory$_4$. Strangely, the predicate '(be) a theory$_4$' cannot be applied to the content of a theory$_4$ paper, to the product of the activity of doing theory$_4$, or to the work of a theorist$_4$ [@abend2008, pp. 179].
 
-Abend doesn't reach this same conclusion because he has tied his hands in advance. His "lexicographic" approach forbids him from committing to an *a priori* concept of what 'theory' is. But it's obvious that theories 1 through 7 exist within 'classical theory'. I also think it *ought* to be the case that any outcome of 'theorizing' should receive the label of 'theory' (whatever that means, pick a number).
+I think it *ought* to be the case that any outcome of 'theorizing' should receive the label of 'theory' (whatever that means).
+
+In this sense, 'classical theory' is just any form of 'theory' that has been *canonized*.
