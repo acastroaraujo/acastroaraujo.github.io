@@ -36,9 +36,9 @@ The long list associated with **structure** includes: opportunities, resources, 
 
 This philosophical debate usually starts by pitting "structure" against "agency" as two opposite and competing forces. The debate usually ends in resolution when sociologists characterize *both* structure *and* agency as two mutually constitutive (thus inseparable) phenomena. This conflation is some sort of magical incantation that makes sociologists nod in agreement every time someone utters these words.
 
-There are times in wish to make this whole debate disappear, as I think it isn't a productive way to approach theory. However, I'd be remiss if I didn't acknowledge at least two important reasons for why this debate keeps creeping back in sociological discourse.
+At times I wish to make this whole debate disappear. It's not a productive way to approach theory. However, I'd be remiss if I didn't acknowledge at least two important reasons for why this debate is sort of inevitable.
 
-1.  It tends to make sociologists *bad writers,* particularly for two reasons: "the habitual use of passive constructions and abstract nouns" [@becker2008, pp. 8][^3].
+1.  It helps explain why some sociologists are *bad writers* that overely on "passive constructions" and "abstract nouns" "the habitual use of passive constructions and abstract nouns" [@becker2008, pp. 8][^3].
 
     > One problem has to do with agency: who did the things that your sentence alleges were done? Sociologists often prefer locutions that leave the answer to that question unclear, largely because many of their theories don't tell them who is doing what. In many sociological theories, things just happen without anyone doing them. It's hard to find a subject for a sentence when "larger social forces" or "inexorable social processes" are at work [@becker2008, pp. 7-8].
 
@@ -54,7 +54,7 @@ There are times in wish to make this whole debate disappear, as I think it isn't
 
 [^3]: Economists encounter similar issues in their writing when they invoke "market forces", "representative agents", "productivity", "equilibrium", among others.
 
-Ultimately ***my own*** thoughts on agency mirror Bruno de Finetti's thoughts on probability. But nobody should keep wasting their time on this.
+Ultimately ***my own*** thoughts on agency mirror Bruno de Finetti's thoughts on probability.
 
 <aside>
 

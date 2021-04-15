@@ -4,15 +4,15 @@
       "path": "about.html",
       "title": "about this blog",
       "author": [],
-      "contents": "\nHello.\nI’m currently a PhD student in the Department of Sociology at Duke University.\nMy research interests have to do with culture, economic sociology, and network theory.\nI’m also interested in contributing to the type of quantitative research that fights against this common stereotype:\n\n\n\nCurrently thinking about:\nWhen government by abstractions works and when it fails (e.g. Scott 1998; Stinchcombe 2001).\nHow political elites shape belief networks.\nThe evolution of legal precedent\nbirth, life-expectancy, and “death” of precedents\ninfluence, innovation, and competition\n\nFactor analysis and other dimensionality reduction techniques.\nNetworks of social support (e.g. Small 2017), kinship, and gender.\n\n\n\nScott, James C. 1998. Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed. New Haven: Yale University Press.\n\n\nSmall, Mario Luis. 2017. Someone to Talk to. Oxford University Press.\n\n\nStinchcombe, Arthur L. 2001. When Formality Works: Authority and Abstraction in Law and Organizations. University of Chicago Press.\n\n\n\n\n",
-      "last_modified": "2021-04-14T13:26:45-04:00"
+      "contents": "\nHello.\nI’m currently a doctoral student in Sociology at Duke University.\nMy research interests have to do with culture, economic sociology, and network theory.\nI’m also interested in contributing to the type of quantitative research that fights against this common misconception:\n\n\n\nCurrently thinking about:\nWhen government by abstractions works and when it fails (e.g. Scott 1998; Stinchcombe 2001).\nHow political elites shape belief networks.\nThe evolution of legal precedent from the perspective of cultural evolution.\nbirth, life-expectancy, and “death” of precedents.\ninfluence, innovation, and competition.\n\nFactor analysis and other dimensionality reduction techniques.\nNetworks of social support (e.g. Small 2017), kinship, and gender.\n\n\n\nScott, James C. 1998. Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed. New Haven: Yale University Press.\n\n\nSmall, Mario Luis. 2017. Someone to Talk to. Oxford University Press.\n\n\nStinchcombe, Arthur L. 2001. When Formality Works: Authority and Abstraction in Law and Organizations. University of Chicago Press.\n\n\n\n\n",
+      "last_modified": "2021-04-14T23:22:53-04:00"
     },
     {
       "path": "index.html",
       "title": "acastroaraujo",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-26T15:57:44-04:00"
+      "last_modified": "2021-04-14T17:47:41-04:00"
     }
   ],
   "collections": ["posts/posts.json"]
