@@ -14,6 +14,9 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.height = 3, fig.width = 5, fig.align = "center")
+
+library(tidyr)
+library(tibble)
 ```
 
 *Finding the peak of parabola*
@@ -65,9 +68,61 @@ opt <- optim(
 opt
 ```
 
+In statistics we usually try to find the maximum of likelihood functions in order to fit regression models. For example, a simple logistic regression can be fit by doing the following:
+
+```{r, echo=FALSE}
+ucb <- tibble::as_tibble(datasets::UCBAdmissions) %>% 
+  tidyr::uncount(weights = n) %>% 
+  dplyr::rename_all(tolower) %>% 
+  dplyr::mutate(admitted = as.integer(admit == "Admitted")) %>% 
+  dplyr::select(!admit) %>% 
+  as.data.frame()
+```
+
+```{r}
+## The dataset, see `help("UCBAdmissions")`
+str(ucb)
+
+## the design matrix
+X <- model.matrix(admitted ~ gender + dept, data = ucb)
+
+## the outcome variable
+y <- ucb$admitted
+
+## the log-likelihood function
+log_likelihood <- function(beta, outcome, dmat) {
+  
+  lp <- dmat %*% beta ## the linear predictor
+  p <- plogis(lp)  ## the link function
+  
+  sum(dbinom(outcome, size = 1, prob = p, log = TRUE))  ## the log-likelihood
+}
+
+## maximum likelihood estimate!
+opt <- optim(
+  par = rep(1, ncol(X)), ## initial values are all 1's
+  fn = log_likelihood, method = "BFGS",
+  outcome = y, dmat = X,
+  # this next line is critical: 
+  # it tells R to maximize rather than minimize
+  control = list(fnscale = -1)
+)
+
+names(opt$par) <- colnames(X)
+opt$par
+```
+
+We can compare this to the outcome given by R's `glm()` function:
+
+```{r}
+fit <- glm(admitted ~ gender + dept, data = ucb, family = binomial(link = "logit"))
+coefficients(fit)
+```
+
+
 ****
 
-In statistics we usually try to find the maximum of likelihood functions in order to fit regression models. Users of [**Stan**](https://mc-stan.org/) should know that it can be used for optimization as well.
+Users of [**Stan**](https://mc-stan.org/) should know that it can be used for optimization as well.
 
 ```{r}
 library(rstan)

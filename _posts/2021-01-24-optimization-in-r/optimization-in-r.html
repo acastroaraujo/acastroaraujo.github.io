@@ -1433,7 +1433,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="optimization-in-r_files/header-attrs-2.6/header-attrs.js"></script>
+  <script src="optimization-in-r_files/header-attrs-2.7/header-attrs.js"></script>
   <script src="optimization-in-r_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="optimization-in-r_files/popper-2.6.0/popper.min.js"></script>
   <link href="optimization-in-r_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1555,8 +1555,69 @@ $convergence
 $message
 NULL</code></pre>
 </div>
+<p>In statistics we usually try to find the maximum of likelihood functions in order to fit regression models. For example, a simple logistic regression can be fit by doing the following:</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>## The dataset, see `help("UCBAdmissions")`</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>ucb</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>&#39;data.frame&#39;:   4526 obs. of  3 variables:
+ $ gender  : chr  &quot;Male&quot; &quot;Male&quot; &quot;Male&quot; &quot;Male&quot; ...
+ $ dept    : chr  &quot;A&quot; &quot;A&quot; &quot;A&quot; &quot;A&quot; ...
+ $ admitted: int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>## the design matrix</span>
+<span class='va'>X</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/model.matrix.html'>model.matrix</a></span><span class='op'>(</span><span class='va'>admitted</span> <span class='op'>~</span> <span class='va'>gender</span> <span class='op'>+</span> <span class='va'>dept</span>, data <span class='op'>=</span> <span class='va'>ucb</span><span class='op'>)</span>
+
+<span class='co'>## the outcome variable</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>ucb</span><span class='op'>$</span><span class='va'>admitted</span>
+
+<span class='co'>## the log-likelihood function</span>
+<span class='va'>log_likelihood</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>beta</span>, <span class='va'>outcome</span>, <span class='va'>dmat</span><span class='op'>)</span> <span class='op'>{</span>
+  
+  <span class='va'>lp</span> <span class='op'>&lt;-</span> <span class='va'>dmat</span> <span class='op'>%*%</span> <span class='va'>beta</span> <span class='co'>## the linear predictor</span>
+  <span class='va'>p</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Logistic.html'>plogis</a></span><span class='op'>(</span><span class='va'>lp</span><span class='op'>)</span>  <span class='co'>## the link function</span>
+  
+  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span><span class='va'>outcome</span>, size <span class='op'>=</span> <span class='fl'>1</span>, prob <span class='op'>=</span> <span class='va'>p</span>, log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>  <span class='co'>## the log-likelihood</span>
+<span class='op'>}</span>
+
+<span class='co'>## maximum likelihood estimate!</span>
+<span class='va'>opt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/optim.html'>optim</a></span><span class='op'>(</span>
+  par <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>ncol</a></span><span class='op'>(</span><span class='va'>X</span><span class='op'>)</span><span class='op'>)</span>, <span class='co'>## initial values are all 1's</span>
+  fn <span class='op'>=</span> <span class='va'>log_likelihood</span>, method <span class='op'>=</span> <span class='st'>"BFGS"</span>,
+  outcome <span class='op'>=</span> <span class='va'>y</span>, dmat <span class='op'>=</span> <span class='va'>X</span>,
+  <span class='co'># this next line is critical: </span>
+  <span class='co'># it tells R to maximize rather than minimize</span>
+  control <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>fnscale <span class='op'>=</span> <span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>opt</span><span class='op'>$</span><span class='va'>par</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>X</span><span class='op'>)</span>
+<span class='va'>opt</span><span class='op'>$</span><span class='va'>par</span>
+</code></pre>
+</div>
+<pre><code>(Intercept)  genderMale       deptB       deptC       deptD 
+ 0.68192133 -0.09986998 -0.04339776 -1.26259745 -1.29460661 
+      deptE       deptF 
+-1.73930560 -3.30648364 </code></pre>
+</div>
+<p>We can compare this to the outcome given by R’s <code>glm()</code> function:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>admitted</span> <span class='op'>~</span> <span class='va'>gender</span> <span class='op'>+</span> <span class='va'>dept</span>, data <span class='op'>=</span> <span class='va'>ucb</span>, family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span>link <span class='op'>=</span> <span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coefficients</a></span><span class='op'>(</span><span class='va'>fit</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>(Intercept)  genderMale       deptB       deptC       deptD 
+ 0.68192148 -0.09987009 -0.04339793 -1.26259802 -1.29460647 
+      deptE       deptF 
+-1.73930574 -3.30648006 </code></pre>
+</div>
 <hr />
-<p>In statistics we usually try to find the maximum of likelihood functions in order to fit regression models. Users of <a href="https://mc-stan.org/"><strong>Stan</strong></a> should know that it can be used for optimization as well.</p>
+<p>Users of <a href="https://mc-stan.org/"><strong>Stan</strong></a> should know that it can be used for optimization as well.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mc-stan.org/rstan'>rstan</a></span><span class='op'>)</span>
@@ -1579,7 +1640,7 @@ model {
 </div>
 <pre><code>$par
        x 
-2.500003 
+2.500028 
 
 $value
 [1] 27.5
@@ -1589,9 +1650,9 @@ $return_code
 
 $theta_tilde
             x
-[1,] 2.500003</code></pre>
+[1,] 2.500028</code></pre>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
