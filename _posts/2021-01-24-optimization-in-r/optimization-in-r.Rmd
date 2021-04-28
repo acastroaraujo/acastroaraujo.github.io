@@ -76,7 +76,8 @@ ucb <- tibble::as_tibble(datasets::UCBAdmissions) %>%
   dplyr::rename_all(tolower) %>% 
   dplyr::mutate(admitted = as.integer(admit == "Admitted")) %>% 
   dplyr::select(!admit) %>% 
-  as.data.frame()
+  dplyr::mutate(across(where(is.character), factor)) %>% 
+  as.data.frame() 
 ```
 
 ```{r}
@@ -85,6 +86,7 @@ str(ucb)
 
 ## the design matrix
 X <- model.matrix(admitted ~ gender + dept, data = ucb)
+dim(X)
 
 ## the outcome variable
 y <- ucb$admitted
