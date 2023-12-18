@@ -1,8 +1,10 @@
 ---
 title: "andrés castro araújo"
 about:
+  id: content
   template: jolla
   image: image.png
+  image-shape: round
   links:
     - text: "CV"
       file: cv.pdf
@@ -12,6 +14,13 @@ about:
       text: blog
 ---
 
-I am a PhD student in the Sociology program at Duke University. 
+::: {#content}
+I am a PhD student in the Sociology program at Duke University.
 
-Research interests: organizations, cultural sociology, status, theory.
+Research Interests: organizations, cultural sociology, status, theory.
+:::
+
+::: {style="font-size: 0.6em; text-align: right; margin-top: 100px"}
+*It is in country unfamiliar, emotionally or topographically, <br>
+that one needs poems and road maps.*
+:::
