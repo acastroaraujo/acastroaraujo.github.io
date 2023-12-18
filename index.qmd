@@ -4,10 +4,14 @@ about:
   template: jolla
   image: image.png
   links:
-    - CV
+    - text: "CV"
+      file: cv.pdf
     - icon: github
       href: https://github.com/acastroaraujo
     - icon: chat-text
       text: blog
 ---
 
+I am a PhD student in the Sociology program at Duke University. 
+
+Research interests: organizations, cultural sociology, status, theory.

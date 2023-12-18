@@ -7,9 +7,9 @@ website:
 
 format:
   html:
+    mainfont: Optima
     theme: cosmo
     css: styles.scss
-    toc: true
 
 execute:
   freeze: auto
