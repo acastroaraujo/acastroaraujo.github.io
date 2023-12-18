@@ -1,0 +1,13 @@
+---
+title: "andrés castro araújo"
+about:
+  template: jolla
+  image: image.png
+  links:
+    - CV
+    - icon: github
+      href: https://github.com/acastroaraujo
+    - icon: chat-text
+      text: blog
+---
+

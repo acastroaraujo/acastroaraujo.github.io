@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "andrés castro araújo"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.scss
+    toc: true
+
+execute:
+  freeze: auto
+
+
