@@ -12,12 +12,13 @@ about:
       href: https://github.com/acastroaraujo
     - icon: chat-text
       text: blog
+      href: https://acastroaraujo.github.com/blog
 ---
 
 ::: {#content}
 I am a PhD student in the Sociology program at Duke University.
 
-Research Interests: organizations, cultural sociology, status, theory.
+Organizations, cultural sociology, status, theory.
 :::
 
 ::: {style="font-size: 0.6em; text-align: right; margin-top: 100px"}
