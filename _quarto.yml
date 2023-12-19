@@ -1,16 +1,31 @@
 project:
   type: website
   output-dir: _site
+  resources: 
+    - "*.pdf$"
 
 website:
   title: "andrés castro araújo"
+  navbar:
+    right:
+      - icon: house
+        text: about
+        href: https://acastroaraujo.github.io
+      - icon: file-person
+        text: cv
+        href: cv/index.qmd
+      - icon: github
+        text: github
+        href: https://github.com/acastroaraujo
+      - icon: chat-text
+        text: blog
+        href: https://acastroaraujo.github.io/blog/
 
 format:
   html:
-    mainfont: Optima
-    theme: cosmo
-    css: styles.scss
+    theme: [cosmo, styles.scss]
+    fig-align: center
+    code-fold: show
 
 execute:
   freeze: auto
-

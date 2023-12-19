@@ -1,27 +1,32 @@
 ---
 title: "andrés castro araújo"
+mainfont: Optima
+navbar: false
 about:
   id: content
   template: jolla
   image: image.png
   image-shape: round
   links:
-    - text: "CV"
-      file: cv.pdf
+    - icon: file-person
+      text: cv
+      href: cv/index.qmd
     - icon: github
+      text: github
       href: https://github.com/acastroaraujo
     - icon: chat-text
       text: blog
       href: https://acastroaraujo.github.io/blog/
+## ADD TEACHING AND RESEARCH
 ---
 
-::: {#content}
+::: {#content style="text-align: center;"}
 I am a PhD student in the Sociology program at Duke University.
 
-Organizations, cultural sociology, status, theory.
+Organizations. Cultural Sociology. Status. Theory.
 :::
 
-::: {style="font-size: 0.6em; text-align: right; margin-top: 100px"}
+::: {style="font-size: 0.7em; text-align: right; margin-top: 100px"}
 *It is in country unfamiliar, emotionally or topographically, <br>
 that one needs poems and road maps.*
 :::
