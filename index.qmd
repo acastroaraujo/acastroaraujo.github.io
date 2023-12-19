@@ -12,7 +12,7 @@ about:
       href: https://github.com/acastroaraujo
     - icon: chat-text
       text: blog
-      href: https://acastroaraujo.github.com/blog
+      href: https://acastroaraujo.github.io/blog/
 ---
 
 ::: {#content}
