@@ -23,10 +23,9 @@ about:
 ::: {#content style="text-align: center;"}
 I am a PhD student in the Sociology program at Duke University.
 
-Organizations. Cultural Sociology. Status. Theory.
+Organizations. Culture. Status. Networks. Theory.
 :::
 
 ::: {style="font-size: 0.7em; text-align: right; margin-top: 100px"}
-*It is in country unfamiliar, emotionally or topographically, <br>
-that one needs poems and road maps.*
+*It is in country unfamiliar, emotionally or topographically, <br> that one needs poems and road maps.*  <br> — Clifford Geertz
 :::
