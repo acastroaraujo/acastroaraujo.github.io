@@ -6,6 +6,8 @@ project:
 
 website:
   title: "andrés castro araújo"
+  open-graph: true
+  twitter-card: true
   navbar:
     title: false
     left:
@@ -27,6 +29,9 @@ format:
     theme: [cosmo, styles.scss]
     fig-align: center
     code-fold: show
+    grid:
+      sidebar-width: 100px
+      margin-width: 500px
 
 execute:
   freeze: auto

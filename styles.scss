@@ -5,10 +5,15 @@
 // Define a variable for the Optima font family
 $optima-font: 'Optima', sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+$fira-font: 'Fira Code', monospace; 
+
 $font-family-sans-serif: $optima-font;
+$font-family-monospace: $fira-font; 
 $font-family-monospace: "Fira Code";
 $link-color: #DC143C;
 $code-block-bg: #F4F4F4;
+$font-size-root: 1em;
 $navbar-bg: #F8F9FA;
 //$body-bg: #FEFDFA;
 //$primary: #4974A5;
