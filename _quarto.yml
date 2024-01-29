@@ -8,7 +8,7 @@ website:
   title: "andrés castro araújo"
   navbar:
     title: false
-    right:
+    left:
       - icon: house
         text: about
         href: https://acastroaraujo.github.io
