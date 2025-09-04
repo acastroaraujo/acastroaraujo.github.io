@@ -1,0 +1,345 @@
+% !TEX TS-program = XeLaTeX
+%%% ------------------------------------------------------------------------
+%%% Requirements
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% url.sty
+%%% fontspec.sty
+%%% fontawesome.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% fancyhdr.sty
+%%% memoir.cls
+%%% ------------------------------------------------------------------------
+%%% org-preamble-xelatex.sty
+%%% memoir-article-styles.sty
+%%%------------------------------------------------------------------------
+
+\documentclass[11pt,article,oneside]{memoir}
+\usepackage{url}
+\usepackage{fontawesome6}
+\usepackage{fancyhdr}
+\usepackage{org-preamble-xelatex} 
+\fboxsep0.1em
+
+%%%------------------------------------------------------------------------
+%%% META
+%%%------------------------------------------------------------------------
+
+\def\myauthor{Andrés Castro Araújo}
+\def\myaffiliation{Duke University}
+\def\myaddress{Sociology Department}
+\def\myemail{andres.castro.araujo@duke.edu}
+\def\myweb{acastroaraujo.github.io}
+\def\mygithub{acastroaraujo}
+\def\mybluesky{acastroaraujo.bsky.social}
+
+%%%------------------------------------------------------------------------
+%%% DOCUMENT
+%%%------------------------------------------------------------------------
+
+\begin{document}
+
+\setromanfont[
+  Mapping={tex-text},
+  Numbers={OldStyle},
+  Ligatures={Common}]{Minion Pro}
+\setsansfont[
+  Mapping=tex-text,
+  Ligatures={Common}, 
+  Colour=AA0000]{Unit-Medium}
+\setmonofont[
+  Mapping=tex-text,
+  Scale=MatchLowercase,
+  Contextuals={WordInitial,WordFinal},
+  Ligatures=TeX
+  ]{Fira Code}
+\newfontface\scheader[
+  SmallCapsFont={Minion Pro},
+  SmallCapsFeatures={Letters=SmallCaps}
+  ]{Minion Pro}
+\newfontface\addressblock[
+  Mapping={tex-text}, 
+  Numbers={OldStyle},
+  Ligatures={Common}
+  ]{Minion Pro}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\fontsize{8pt}{10pt}\selectfont Updated on August 2025.}
+
+%%%------------------------------------------------------------------------
+%%% LOCAL
+%%%------------------------------------------------------------------------
+
+\makeatletter
+\newcommand*\mysize{%
+  \@setfontsize\mysize{6.8}{9.0}%
+}
+\makeatother
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+\renewcommand{\labelitemi}{~}
+\def\ind{\hangindent=0.75 true cm\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% CONTACT
+%%%------------------------------------------------------------------------
+
+\begin{minipage}[t]{2.95in}
+ \flushright {\small 
+ \href{http://sociology.duke.edu}{Department of Sociology} \\ 758 Erwin Square Building \\ Duke University \\ \vspace{-0.05in} Durham, \textsc{NC}, 27708} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{2in}
+  \flushright \small  \addressblock
+    {\mysize \texttt{\href{\myweb}{\myweb}} \, \faGlobe} \\
+    {\mysize \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
+    {\mysize \texttt{\href{http://github.com/acastroaraujo}{\mygithub}} \, \faGithub }  \\ 
+    {\mysize \texttt{\href{https://bsky.app/profile/acastroaraujo.bsky.social}{\mybluesky}}\, \faBluesky} \\
+\end{minipage}
+
+\bigskip
+
+%%%------------------------------------------------------------------------
+%%% EDUCATION
+%%%------------------------------------------------------------------------
+
+%% Name 
+\noindent{\large\scheader \textsc{ANDRÉS CASTRO ARAÚJO}}
+\reversemarginpar
+
+\bigskip
+
+%% Education
+
+\marginhead{\sffamily {{\vskip -0.23em} education}}
+
+\ind \makebox[1cm][l]{Ph.D.} Sociology, Duke University, \emph{In progress.} \par
+
+\ind
+{%
+  \parshape 1 0.43in \dimexpr\linewidth-0.43in\relax
+  \footnotesize
+  Dissertation Committee: Kieran Healy, Martin Ruef, Stephen Vaisey,
+  \& Craig Rawlings.
+  \normalsize\par
+}
+
+\ind \makebox[1cm][l]{M.A.} Sociology, Duke University, 2023. \par
+
+\ind \makebox[1cm][l]{M.A.} Quantitative Methods in the Social Sciences, Columbia University, 2019. \par
+
+\ind \makebox[1cm][l]{B.A.} Sociology, Universidad del Rosario, 2016. \par
+
+\ind \makebox[1cm][l]{B.A.} Economics, Universidad del Rosario, 2015. \par
+
+\bigskip
+
+\marginhead{\sffamily {\vskip 0.35em} research \newline interests}
+\medskip
+
+\noindent Organizations, Law, Automation
+
+\bigskip
+
+%%%------------------------------------------------------------------------
+%%% JOURNAL ARTICLES
+%%%------------------------------------------------------------------------
+ 
+\marginhead{\sffamily {\vskip 0.35em} publications}
+\medskip
+
+\ind \emph{Peer-Reviewed Articles}\par \vspace{0.075in}
+
+% Paper
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo} \& Nicolás Restrepo Ochoa. 2025. ``How to Make a Functionalist Argument." \emph{Sociological Science}, 12(20), 456–485. \par
+\ind \hspace{0.35in} \footnotesize \href{http://dx.doi.org/10.15195/v12.a20}{Print.} \vspace{0.05in}
+
+% Paper
+
+\ind \normalsize Aidan Combs, Graham Tierney, Fatima Alqabandi, Devin Cornell, Gabriel Varela, \colorbox{Gray!15}{Andrés Castro Araújo}, Lisa Argyle, Alexander Volfovsky, and Christopher A. Bail. 2023. ``Perceived gender and political persuasion: a social media field experiment during the 2020 US Democratic presidential primary election." 
+\emph{Nature Scientific Reports.} 14051 \par
+\ind \hspace{0.35in} \footnotesize \href{https://doi.org/10.1038/s41598-023-39359-0}{Print.} \vspace{0.05in}
+
+\bigskip
+
+\ind \normalsize \emph{Working Papers}\par \vspace{0.075in}
+
+% Paper
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo}. 2025. ``The Authority of Abstractions." \par
+\ind \hspace{0.35in} \footnotesize \href{https://osf.io/preprints/osf/ysa7g_v1}{arXiv Print.} \vspace{0.05in}
+
+\bigskip
+
+\ind \normalsize \emph{In Progress}\par \vspace{0.075in}
+
+% Paper
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo}. ``An Ecology of Rulings." \medskip
+
+% Paper
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo}. ``Innovation in Constitutional Decision-Making." \medskip
+
+% Paper
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo} \& Braulio Güémez Graniel. ``Categories in Flux: A Formal Model of Social Classification." \medskip
+
+\bigskip
+
+\ind \normalsize \emph{Other Publications}\par \vspace{0.075in}
+
+% Paper
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo}. 2019. ``El poder detrás de un número. Visibilidad estadística y desigualdad en Colombia y República Dominicana." In: \emph{¿Cómo pensar la desigualdad desde los derechos humanos?} Siglo XXI Editores \par
+
+\ind \hspace{0.35in} \footnotesize \href{https://www.dejusticia.org/wp-content/uploads/2019/07/Co%CC%81mo-pensar-la-desigualdad-desde-los-derechos-humanos_-v2.pdf}{Print.} 
+
+% Paper
+
+\ind \normalsize Rodrigo Uprimny, Sergio Chaparro H. \& \colorbox{Gray!15}{Andrés Castro Araújo}. 2019. ``Bridging the Gap: The Evolving Doctrine on ESCR and Maximum Available Resources." In: \emph{The Future of Economic and Social Rights.} Cambridge University Press \medskip
+
+\ind \normalsize \colorbox{Gray!15}{Andrés Castro Araújo}, Paul Lagunes, and Xiaoxuan Yang. ``Un alcance de la integridad estatal en América Latina." 2019. \emph{Redes} \par
+
+\ind \hspace{0.35in} \footnotesize \href{https://www.redesarrollo.pe/wp-content/uploads/2020/10/Un-Alcance-de-la-integridad-estatal-en-America-Latina.pdf}{Print.} \vspace{0.05in}
+
+\ind \normalsize Paul Lagunes, Xiaoxuan Yang, and \colorbox{Gray!15}{Andrés Castro Araújo}. ``The State of Corruption in Latin America." 2019. \emph{Baker Institute Report} \par
+
+\ind \hspace{0.35in} \footnotesize \href{https://www.bakerinstitute.org/research/state-corruption-latin-america/}{Print.} \vspace{0.05in}
+
+\bigskip
+
+\normalsize
+
+%%%------------------------------------------------------------------------
+%%% PRESENTATIONS
+%%%------------------------------------------------------------------------
+
+\marginhead{\sffamily {\vskip 0.35em} conference \newline presentations}
+\medskip
+
+\ind ``An Ecology of Rulings"
+
+\ind \hspace{0.35in} \footnotesize \textemdash Annual Meeting of the American Sociological Association, August 2025. \normalsize 
+
+\ind ``Categories In Flux: Membership Change and Compositional Effects"
+
+\ind \hspace{0.35in} \footnotesize \textemdash Annual Meeting of the International Network of Analytical Sociology, June 2025. \normalsize
+
+\ind ``Innovation in Constitutional Decision-Making"
+
+\ind \hspace{0.35in} \footnotesize \textemdash UNC-Duke Student Conference, February 2025. \normalsize
+
+\ind ``Functionalist foundations for problem-solving sociologists."
+
+\ind \hspace{0.35in} \footnotesize \textemdash Annual Meeting of the American Sociological Association, August 2024. \normalsize
+
+\ind ``Proper Functions in Society: Selectionist Arguments in Sociology." 
+
+\ind \hspace{0.35in} \footnotesize \textemdash On Purpose Philosophy Conference, Duke University, May 2024 \normalsize
+
+\ind ``How to make functionalist arguments." 
+
+\ind \hspace{0.35in} \footnotesize \textemdash Annual Meeting of the Southern Sociological Society. April 2024. \normalsize
+
+\bigskip 
+
+%%%------------------------------------------------------------------------
+%%% SOFTWARE
+%%%------------------------------------------------------------------------
+
+\marginhead{\sffamily {{\vskip 0.35em} software}}
+\medskip
+\noindent\emph{R Packages \vspace{0.05in}}
+
+\ind \href{https://acastroaraujo.github.io/ccc/}{\texttt{ccc}} \& \href{https://acastroaraujo.github.io/cccLLM/}{\texttt{cccLLM}} 
+
+\ind \hspace{0.35in} \footnotesize \textemdash Contains the datasets created for my dissertation work on the Colombian Constitutional Court. \normalsize
+
+\ind \href{https://acastroaraujo.github.io/protoClassification/}{\texttt{protoClassification}} 
+
+\ind \hspace{0.35in} \footnotesize \textemdash Simulates data from prototype models of classification. \normalsize
+
+\ind \href{https://acastroaraujo.github.io/actsims/}{\texttt{actsims}} 
+
+\ind \hspace{0.35in} \footnotesize \textemdash Fast implementation of computations related to Affect-Control Theory. \normalsize
+
+\bigskip
+
+%%%------------------------------------------------------------------------
+%%% GRANTS AND AWARDS
+%%%------------------------------------------------------------------------
+
+\marginhead{\sffamily {\vskip 0.35em}grants and \newline awards \newline}
+\medskip
+
+\ind Vorsanger-Smith Scholar Award, Duke Sociology Department, 2025.
+
+\ind Research Grant, Duke Sociology Department, 2025.
+
+\ind Summer Research Fellowship, Duke Graduate School, 2020, 2021.
+
+\ind Pasaporte a la Ciencia, awarded by Colciencias (Bogotá), 2017.
+
+\bigskip
+
+%%%------------------------------------------------------------------------
+%%% TEACHING
+%%%------------------------------------------------------------------------
+
+\marginhead{\sffamily {{\vskip 0.35em} teaching}}
+\bigskip
+
+\ind Teaching Assistant
+
+\ind \hspace{0.35in} \footnotesize \textemdash Data Analysis and Visualization (undergraduate), Duke University, 2025
+
+\ind \hspace{0.35in} \footnotesize \textemdash Social Theory (undergraduate), Duke University, 2024
+
+\ind \hspace{0.35in} \textemdash Social Statistics (graduate), Duke University, 2023-2024
+
+\ind \hspace{0.35in} \textemdash Markets and Management (undergraduate), Duke University, 2022
+
+\ind \hspace{0.35in} \textemdash Social Statistics (undergraduate), Duke University, 2022
+
+\ind \hspace{0.35in} \textemdash Summer Institute in Computational Social Science, Duke University, 2021
+
+\normalsize \ind Instructor 
+
+\footnotesize
+
+\ind \hspace{0.35in} \textemdash Economy and Society, Universidad del Rosario, 2017
+
+\ind \hspace{0.35in} \textemdash Introduction to Statistics, Universidad del Rosario, 2016
+
+\normalsize
+
+\bigskip
+
+%%%------------------------------------------------------------------------
+%%% SERVICE
+%%%------------------------------------------------------------------------
+
+\marginhead{\sffamily {{\vskip 0.35em} profession}}
+\medskip
+
+\ind \makebox[2.5cm][l]{\emph{Membership}} American Sociological Association\par
+
+\ind \makebox[2.5cm][l]{\emph{Reviewer}} American Journal of Sociology, Análisis Político\par
+
+\bigskip
+
+\marginhead{\sffamily {{\vskip 0.35em} professional \newline experience}}
+\medskip
+
+\ind \makebox[2.5cm][l]{\emph{Data Scientist}} TBWA/Chiat/Day, 2019-2020
+
+\ind \makebox[2.5cm][l]{\emph{Researcher}} Center for Law, Justice, and Society — Dejusticia, 2015-2017
+
+\ind \makebox[2.5cm][l]{\emph{Translator}} International Sociological Association, 2011-2015
+
+\end{document}

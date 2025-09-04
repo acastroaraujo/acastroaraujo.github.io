@@ -23,7 +23,7 @@ about:
 ::: {#content style="text-align: center;"}
 I am a PhD student in the Sociology program at Duke University.
 
-Organizations. Culture. Status. Networks.
+Organizations. Law. Computers.
 :::
 
 ::: {style="font-size: 0.7em; text-align: right; margin-top: 100px"}
