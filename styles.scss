@@ -1,16 +1,24 @@
 /*-- scss:defaults --*/
 
-// Import the Optima font from a CDN
 @import url('https://www.cssfontstack.com/Optima');
-// Define a variable for the Optima font family
 $optima-font: 'Optima', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+$roboto-font: 'Roboto Condensed', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 $fira-font: 'Fira Code', monospace; 
 
-$font-family-sans-serif: $optima-font;
+// @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+// $header-font: 'IM Fell DW Pica SC', serif;
+
+// Optional weight aliases
+$roboto-light: 300;
+$roboto-regular: 400;
+$roboto-bold: 700;
+
+$font-family-sans-serif: $roboto-font;
 $font-family-monospace: $fira-font; 
-$font-family-monospace: "Fira Code";
 $link-color: #DC143C;
 $code-block-bg: #F4F4F4;
 $font-size-root: 1em;
@@ -29,3 +37,14 @@ $navbar-bg: #F8F9FA;
 //   font-family: $custom-font;
 //   font-weight: 900;
 // }
+
+
+body {
+  font-family: $roboto-font;
+  font-weight: $roboto-light;
+}
+
+.about-link-text {
+  font-family: $roboto-font;
+  font-weight: $roboto-light;
+}

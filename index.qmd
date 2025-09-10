@@ -21,9 +21,11 @@ about:
 ---
 
 ::: {#content style="text-align: center;"}
-I am a PhD student in the Sociology program at Duke University.
+I am a PhD student in the Sociology program at Duke University. 
 
-Organizations. Law. Computers.
+My research examines the formalization of decision-making in organizations.
+
+_Keywords: Organizations, Law, Computers, Cognition._
 :::
 
 ::: {style="font-size: 0.7em; text-align: right; margin-top: 100px"}
