@@ -28,6 +28,8 @@ My research examines the formalization of decision-making in organizations.
 _Keywords: Organizations, Law, Computers, Cognition._
 :::
 
-::: {style="font-size: 0.7em; text-align: right; margin-top: 100px"}
+::: {style="font-size: 0.7em; text-align: right; margin-top: 30px"}
 *It is in country unfamiliar, emotionally or topographically, <br> that one needs poems and road maps.*  <br> — Clifford Geertz
+
+*We should see law as endemic in all institutions that rely <br> for social control on formal authority and rule-making.* <br> — Philip Selznick
 :::
